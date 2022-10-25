@@ -223,7 +223,7 @@ Parameters:
       If you are linking and deploying from a private fork of the Retail Demo Store repository in your GitHub account, a GitHub Personal
       Access Token is required. Otherwise, leave blank. Be sure that your token has the "repo", "repo:status", and "admin:repo_hook" permission scopes.
     NoEcho: true
-    Default: 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
+    Default: xxxx
 
   PreIndexOpenSearch:
     Type: String
