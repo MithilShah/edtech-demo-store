@@ -9,8 +9,8 @@
       </p>
 
       <p>
-        The EdTech Demo mimics an online store with products, users and user-interactions to showcase the
-        personalized product recommendations a shopper would receive based on historical and real time click-through
+        The EdTech Demo mimics an online store with courses, users and user-interactions to showcase the
+        personalized course recommendations a student would receive based on historical and real time click-through
         behavior.
       </p>
 

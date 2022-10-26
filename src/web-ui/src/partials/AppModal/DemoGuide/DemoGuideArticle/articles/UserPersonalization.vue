@@ -26,7 +26,7 @@
       shoppers to experience the difference in personalized product recommendations offered.
     </p>
 
-    <p>If you’re not signed in, featured products will be displayed instead.</p>
+    <p>If you’re not signed in, featured courses will be displayed instead.</p>
   </ArticleLayout>
 </template>
 

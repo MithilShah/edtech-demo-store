@@ -8,7 +8,7 @@
       aria-haspopup="true"
       aria-expanded="false"
     >
-      <span class="d-none d-lg-inline">Shop <i class="fa fa-chevron-down ml-1"></i></span>
+      <span class="d-none d-lg-inline">Courses <i class="fa fa-chevron-down ml-1"></i></span>
       <i class="fa fa-bars d-inline d-lg-none"></i>
     </button>
     <div class="dropdown-menu" aria-labelledby="categories-dropdown-anchor">

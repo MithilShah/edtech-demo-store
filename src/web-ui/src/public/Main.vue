@@ -50,7 +50,7 @@
         :experiment="featuredProductsExperiment"
       >
         <template #heading>
-          Featured products
+          Featured Courses
           <DemoGuideBadge
             v-if="featuredProductsDemoGuideBadgeArticle"
             :article="featuredProductsDemoGuideBadgeArticle"

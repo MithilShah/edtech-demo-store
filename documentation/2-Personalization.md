@@ -53,7 +53,7 @@ You can have a shopper auto-selected for you or you can choose your own. In the 
 
 **Amazon Personalize Recipe:** [User-Personalization](https://docs.aws.amazon.com/personalize/latest/dg/native-recipe-new-item-USER_PERSONALIZATION.html)
 
-The user personalization use-case is implemented on the bottom half of the Edtech Demo home view **when you are signed in to a Edtech Demo user** account. Be sure to emulate a shopper profile as described above so that a persona is linked to your session. Product recommendations in the “Inspired by your shopping trends” section are being powered by Amazon Personalize. If you’re not signed in, featured products will be displayed here instead.
+The user personalization use-case is implemented on the bottom half of the Edtech Demo home view **when you are signed in to a Edtech Demo user** account. Be sure to emulate a shopper profile as described above so that a persona is linked to your session. Product recommendations in the “Inspired by your shopping trends” section are being powered by Amazon Personalize. If you’re not signed in, featured courses will be displayed here instead.
 
 > Since the Edtech Demo is using a Personalize Event Tracker to record real-time interaction events, it is important to keep in mind that recommendations will change as a result of your clicking and browsing activity in the web application. Therefore, the recommendations may not match up to the original shopper persona used to train the model. This is a powerful demo feature, though, since it shows how Personalize adapts to evolving user intent. It can also show how recommendations adapt for new users (i.e. cold starting users).
 
