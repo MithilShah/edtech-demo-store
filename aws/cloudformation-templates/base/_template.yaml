@@ -2,7 +2,7 @@
 AWSTemplateFormatVersion: 2010-09-09
 
 Description: >
-  This template deploys the Retail Demo Store.
+  This template deploys the EdTech Demo.
 
 Conditions:
   CreateOpenSearchServiceLinkedRole: !Equals
@@ -20,7 +20,7 @@ Parameters:
 
   SourceDeploymentType:
     Type: String
-    Description: Retail Demo Store source deployment type
+    Description: EdTech Demo source deployment type
     AllowedValues:
       - "GitHub"
       - "CodeCommit"
@@ -417,7 +417,7 @@ Outputs:
     Value: !GetAtt SSMParameters.Outputs.ParameterOptimizelySdkKey
 
   ParameterIVSVideoChannelMap:
-    Description: Retail Demo Store video file to IVS channel mapping parameter
+    Description: EdTech Demo video file to IVS channel mapping parameter
     Value: !GetAtt SSMParameters.Outputs.ParameterIVSVideoChannelMap
 
   ParameterSegmentWriteKey:

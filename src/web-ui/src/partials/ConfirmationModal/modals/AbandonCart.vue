@@ -13,7 +13,7 @@
 
       <p class="mb-3">
         <template v-if="complete">
-          Check the email account provided during account creation. An email from the Retail Demo Store will be in your
+          Check the email account provided during account creation. An email from the EdTech Demo will be in your
           inbox. The goal of this email is to encourage shoppers to complete the order and will include the products
           left in the shopping cart.
         </template>

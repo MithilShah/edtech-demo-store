@@ -2,7 +2,7 @@
 AWSTemplateFormatVersion: 2010-09-09
 
 Description: >
-    This template deploys the Retail Demo Store S3 Buckets.
+    This template deploys the EdTech Demo S3 Buckets.
 
 Parameters:
   CleanupBucketLambdaArn:

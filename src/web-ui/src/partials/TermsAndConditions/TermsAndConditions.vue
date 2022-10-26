@@ -1,7 +1,7 @@
 <template>
   <div class="terms-and-conditions">
     <p class="mb-1">
-      The Retail Demo Store is a demo application. All content displayed in the Retail Demo Store is fictitious and for
+      The EdTech Demo is a demo application. All content displayed in the EdTech Demo is fictitious and for
       demonstration purposes only.
     </p>
 

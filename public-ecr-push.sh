@@ -5,7 +5,7 @@
 # at risk of being rate limited and failing builds).
 
 # Prerequisites:
-# 1. Credentials for the Retail Demo Store staging AWS account where public
+# 1. Credentials for the EdTech Demo staging AWS account where public
 #    images are staged.
 # 2. Your local AWS CLI environment configured with credentials to access
 #    the above mentioned account.

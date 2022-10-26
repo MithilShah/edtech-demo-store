@@ -3,7 +3,7 @@
 Amazon Pay is one of many online payment services that offer low friction,
 secure checkout across different platforms. There is a partial integration of
 <a href="sellercentral.amazon.com/">Amazon Pay for merchants</a>
-into the Retail Demo Store.
+into the Edtech Demo.
     
 If you enter your Amazon Pay credentials as parameters into CloudFormation when
 deploying or updating this demo, an Amazon Pay button will be generated for you,
@@ -18,12 +18,12 @@ We go as far as initiating a checkout session which you can test by logging in w
 
 In order to set up the integration so that you can initiate a checkout session, we need to set up an
 Amazon Pay merchant account, as well as a store, and obtain the integration credentials for that store. Having
-obtained these credentials we can supply them to Retail Demo Store so that it can start a credentialed
+obtained these credentials we can supply them to Edtech Demo so that it can start a credentialed
 checkout session which you can enter by authenticating a test user. For more information about integrating
 with Amazon Pay see <a href="https://developer.amazon.com/docs/amazon-pay-checkout/get-set-up-for-integration.html">
 these instructions</a>.
 
-Here are step-by-step instructions to get you started with Amazon Pay in the Retail Demo Store:
+Here are step-by-step instructions to get you started with Amazon Pay in the Edtech Demo:
 <ol>
   <li>Set up an Amazon Pay account at <a href="https://sellercentral.amazon.com/">
     https://sellercentral.amazon.com/</a>.
@@ -46,7 +46,7 @@ Here are step-by-step instructions to get you started with Amazon Pay in the Ret
     </ul>
   </li>
   <li>
-    If creating a new deployment of Retail Demo Store, enter this information as parameters when deploying your
+    If creating a new deployment of Edtech Demo, enter this information as parameters when deploying your
     CloudFormation template. If updating a deployment, follow the process for updating and enter
     this information as parameters when re-deploying your CloudFormation template.
      
@@ -56,6 +56,6 @@ Here are step-by-step instructions to get you started with Amazon Pay in the Ret
     If all is going well, the Amazon Pay button will show up on the checkout page. Note that this button will
     initiate an Amazon Pay session but will not receive any callbacks from Amazon Pay to continue the checkout.
     Instead, you will be redirected to the Amazon Pay developer pages and the purchase will be automatically
-    accepted by Retail Demo Store.
+    accepted by Edtech Demo.
   </li>
 </ol>

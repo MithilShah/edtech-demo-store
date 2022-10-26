@@ -79,7 +79,7 @@ export default {
                                 </div>`
                   swal({
                     title: 'Store nearby',
-                    text: `We noticed that you are close to your Local AWS Retail Demo Store. Pop into our store near you, check our newest collection, and use the code: ${offer.codes[0]} for any purchase and get ${offer.description}.`,
+                    text: `We noticed that you are close to your Local AWS EdTech Demo. Pop into our store near you, check our newest collection, and use the code: ${offer.codes[0]} for any purchase and get ${offer.description}.`,
                     content: offerDiv
                   });
                 });
@@ -103,7 +103,7 @@ export default {
               orderListDiv.innerHTML = responses.join('')
               swal({
                 title: 'Collection available',
-                text: `Welcome! We are waiting for you at Level 3, Door 2 of your Local Retail Demo Store, and Steve from our team will be greeting you with your following order(s):`,
+                text: `Welcome! We are waiting for you at Level 3, Door 2 of your Local EdTech Demo, and Steve from our team will be greeting you with your following order(s):`,
                 content: orderListDiv
               });
             })

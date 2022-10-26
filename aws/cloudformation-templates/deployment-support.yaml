@@ -2,13 +2,13 @@
 AWSTemplateFormatVersion: 2010-09-09
 
 Description: >
-    This template deploys the Retail Demo Store deployment support resources such as custom resources and misc lambda functions.
+    This template deploys the EdTech Demo deployment support resources such as custom resources and misc lambda functions.
 
 Parameters:
   ResourceBucket:
     Type: String
     Description: >
-      S3 bucket name where the Retail Demo Store deployment resources are staged (product images, nested CloudFormation templates, source code snapshot,
+      S3 bucket name where the EdTech Demo deployment resources are staged (product images, nested CloudFormation templates, source code snapshot,
       notebooks, deployment Lambda code, etc).
 
   ResourceBucketRelativePath:
@@ -20,7 +20,7 @@ Parameters:
   PreIndexOpenSearch:
     Type: String
     Description: >
-      Automatically index the Retail Demo Store products in OpenSearch. Otherwise, select 'No' if you would
+      Automatically index the EdTech Demo products in OpenSearch. Otherwise, select 'No' if you would
       prefer to complete this process yourself by stepping through the Search workshop included in this deployment
       as a Jupyter notebook in SageMaker.
     AllowedValues:
@@ -79,7 +79,7 @@ Parameters:
 
   PinpointEmailFromName:
     Type: String
-    Default: "AWS Retail Demo Store"
+    Default: "AWS EdTech Demo"
 
   PinpointPersonalizeRoleArn:
     Type: String
@@ -124,7 +124,7 @@ Resources:
   PersonalizePreCreateLambdaFunction:
     Type: 'AWS::Lambda::Function'
     Properties:
-      Description: 'Retail Demo Store deployment utility function that uploads datasets, builds solutions, and creates campaigns in Amazon Personalize'
+      Description: 'EdTech Demo deployment utility function that uploads datasets, builds solutions, and creates campaigns in Amazon Personalize'
       Handler: personalize_pre_create_resources.lambda_handler
       Role: !GetAtt
         - PersonalizePreCreateLambdaExecutionRole
@@ -272,7 +272,7 @@ Resources:
     Type: 'AWS::Lambda::Function'
     Condition: CreateIVSResources
     Properties:
-      Description: 'Retail Demo Store deployment utility function that creates IVS channels.'
+      Description: 'EdTech Demo deployment utility function that creates IVS channels.'
       Handler: ivs-create-channels.lambda_handler
       Role: !GetAtt
         - IVSCreateChannelsLambdaExecutionRole
@@ -361,7 +361,7 @@ Resources:
     Condition: DeployPreIndexOpenSearch
     Type: 'AWS::Lambda::Function'
     Properties:
-      Description: 'Retail Demo Store deployment utility function that indexes product catalog in Amazon OpenSearch'
+      Description: 'EdTech Demo deployment utility function that indexes product catalog in Amazon OpenSearch'
       Handler: opensearch-pre-index.lambda_handler
       Role: !GetAtt
         - OpenSearchPreIndexLambdaExecutionRole
@@ -437,7 +437,7 @@ Resources:
     Condition: DeployPreCreatePinpointWorkshop
     Type: 'AWS::Lambda::Function'
     Properties:
-      Description: 'Retail Demo Store deployment utility function that configures messaging templates, segments, and campaigns in Amazon Pinpoint'
+      Description: 'EdTech Demo deployment utility function that configures messaging templates, segments, and campaigns in Amazon Pinpoint'
       Handler: pinpoint-auto-workshop.lambda_handler
       Role: !GetAtt
         - PinpointPreCreateLambdaExecutionRole

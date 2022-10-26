@@ -1,4 +1,4 @@
-# Retail Demo Store Videos Service
+# Edtech Demo Videos Service
 
 The Videos service streams product videos and synchronised metadata to [Amazon Interactive Video Service](https://aws.amazon.com/ivs/) and provides stream metadata (stream endpoints and products contained within the stream) via a Flask API. The [Web UI](../web-ui) makes calls to the service when a user views the 'Live' view. The endpoint provides a list of stream ingest endpoints, each with a list of their associated products, allowing the UI to present all products from the video before they appear in the stream.
 
@@ -10,7 +10,7 @@ IVS channels are created and managed by the CloudFormation template. The default
 
 To create and use IVS channels hosted in your own account, the option 'Use default IVS streams' should be set to 'No' when deploying CloudFormation. In this case, one IVS channel will be created for each '.mkv' video found in the `videos/` path of the staging S3 bucket. These videos should be uploaded by running the provided staging script - any videos in the local `videos/` directory will be uploaded.
 
-**IMPORTANT:** Amazon IVS is currently only supported in the N. Virginia (us-east-1), Oregon (us-west-2), and Ireland (eu-west-1) regions. Therefore, to deploy the Retail Demo Store in a region that does not support IVS, be sure to select to use the Default IVS Streams CloudFormation template parameter.
+**IMPORTANT:** Amazon IVS is currently only supported in the N. Virginia (us-east-1), Oregon (us-west-2), and Ireland (eu-west-1) regions. Therefore, to deploy the Edtech Demo in a region that does not support IVS, be sure to select to use the Default IVS Streams CloudFormation template parameter.
 
 ## Custom Videos & Metadata
 To enable full UI integration with custom videos, metadata must be embedded into the .mkv file.

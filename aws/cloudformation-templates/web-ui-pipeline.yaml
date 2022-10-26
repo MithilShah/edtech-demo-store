@@ -1,7 +1,7 @@
 AWSTemplateFormatVersion: 2010-09-09
 
 Description: >
-    This template deploys the Retail Demo Store Web UI deployment pipeline.
+    This template deploys the EdTech Demo Web UI deployment pipeline.
 
 Parameters:
   ResourceBucket:
@@ -22,19 +22,19 @@ Parameters:
 
   WebRootUrl:
     Type: String
-    Description: Public facing root URL where the Retail Demo Store web user interface is served. Used when building fully qualified URLs for the web user interface.
+    Description: Public facing root URL where the EdTech Demo web user interface is served. Used when building fully qualified URLs for the web user interface.
     AllowedPattern: "^https?://[^\\s/$.?#].[^\\s]*$"
     ConstraintDescription: Must be a valid URL referring to the root domain where web assets are located
 
   ImageRootUrl:
     Type: String
-    Description: URL where Retail Demo Store images such as product images are located
+    Description: URL where EdTech Demo images such as product images are located
     AllowedPattern: "^https?://[^\\s/$.?#].[^\\s]*$"
     ConstraintDescription: Must be a valid URL referring to the root path where images are located
 
   SourceDeploymentType:
     Type: String
-    Description: Retail Demo Store source deployment type
+    Description: EdTech Demo source deployment type
     AllowedValues:
       - 'GitHub'
       - 'CodeCommit'
@@ -194,7 +194,7 @@ Resources:
   CopyImagesLambdaFunction:
     Type: 'AWS::Lambda::Function'
     Properties:
-      Description: 'Retail Demo Store deployment utility function that copies catalog images from staging bucket to Web UI bucket'
+      Description: 'EdTech Demo deployment utility function that copies catalog images from staging bucket to Web UI bucket'
       Code:
         ZipFile: |
           import boto3

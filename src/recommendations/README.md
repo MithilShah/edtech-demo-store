@@ -1,4 +1,4 @@
-# Retail Demo Store Recommendations Service
+# Edtech Demo Recommendations Service
 
 The Recommendations web service provides a RESTful API for retrieving personalized product recommendations,
  related products, product reranking, and suggested discounts (powered by Amazon Personalize).

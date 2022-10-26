@@ -1,4 +1,4 @@
-# Retail Demo Store Users Service
+# Edtech Demo Users Service
 
 The Users web service provides a RESTful API for creating, updating, and retrieving users. The [Web UI](../web-ui) makes calls to this service when a user signs up or updates their profile.
 
@@ -6,7 +6,7 @@ When deployed to AWS, CodePipeline is used to build and deploy the Users service
 
 ## User Test Data
 
-The Users service comes preloaded with 5,000 fake user profiles. The [generate_users_json.py](../../generators/generate_users_json.py) script was used to create these profiles. The resulting profiles data file is bundled with the Retail Demo Store deployment. Therefore, you should not need to run the generate users script under normal conditions.
+The Users service comes preloaded with 5,000 fake user profiles. The [generate_users_json.py](../../generators/generate_users_json.py) script was used to create these profiles. The resulting profiles data file is bundled with the Edtech Demo deployment. Therefore, you should not need to run the generate users script under normal conditions.
 
 > The reason why so many profiles are preloaded is to support the sample sizes needed to simulate experiements in the [Experimentation](../../workshop/3-Experimentation/3.1-Overview.ipynb) workshops.
 

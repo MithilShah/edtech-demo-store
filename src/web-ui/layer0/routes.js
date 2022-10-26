@@ -26,7 +26,7 @@ router.get("/main.js", ({ serveStatic, cache }) => {
   serveStatic(`${DIST_LAYER0}/browser.js`);
 });
 
-// retail demo store services
+// Edtech Demo services
 router.match({ path: "/products-service/:path*" }, ({ proxy, cache }) => {
   cache(CACHE_PAGES);
   proxy("products-service", { path: "/:path*", transformResponse: transform });

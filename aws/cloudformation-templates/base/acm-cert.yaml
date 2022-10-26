@@ -1,7 +1,7 @@
 AWSTemplateFormatVersion: 2010-09-09
 
 Description: >
-    This template deploys the SSL/TLS selfsigned certificate for Retail Demo Store ELBs to ACM
+    This template deploys the SSL/TLS selfsigned certificate for EdTech Demo ELBs to ACM
     Author: Ronak Shah <ronakbsh@amazon.com>
 
 Resources:
@@ -11,7 +11,7 @@ Resources:
           Name: /retaildemostore/acm-arn
           Type: String 
           Value: Dummy
-          Description: Retail Demo Store ACM Arn 
+          Description: EdTech Demo ACM Arn 
           
     ACMImportCertLambdaFunLogGroup:
         Type: AWS::Logs::LogGroup
@@ -23,7 +23,7 @@ Resources:
         Type: AWS::Lambda::Function
         DependsOn: ACMARNParameter        
         Properties:
-          Description: 'Retail Demo Store acm-import-certificate function that returns ARN for imported certificate'
+          Description: 'EdTech Demo acm-import-certificate function that returns ARN for imported certificate'
           Code:
             ZipFile: |
               import boto3

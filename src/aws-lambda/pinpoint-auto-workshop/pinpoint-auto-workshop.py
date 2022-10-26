@@ -4,13 +4,13 @@
 """
 Lambda function designed to be called when the Personalize campaign ARN is set as an
 SSM parameter indicating that the campaign has been created (either by the automated
-deployment process or the Personalize workshop bundled with the Retail Demo Store project).
-A CloudWatch event is setup as part of the Retail Demo Store deployment that watches for
+deployment process or the Personalize workshop bundled with the Edtech Demo project).
+A CloudWatch event is setup as part of the Edtech Demo deployment that watches for
 the SSM parameter to change and targets this function.
 
 This function will automate the steps in the Messaging workshop for Pinpoint. It is
 only deployed when the user indicates that they want the Pinpoint workshop automated.
-Typically this is part of an automated Retail Demo Store deployment/refresh cycle.
+Typically this is part of an automated Edtech Demo deployment/refresh cycle.
 
 This function will delete the CloudWatch rule that triggers it when the function ends
 successfully. Therefore, under normal conditions, this function will be executed once.
@@ -148,21 +148,21 @@ def create_sms_template(template_name, body, description, recommender_id=None):
 
 def create_welcome_email_template():
     return create_email_template(welcome_template_name, 'welcome-email-template',
-                                 subject='Welcome to the Retail Demo Store',
+                                 subject='Welcome to the Edtech Demo',
                                  description='Welcome email sent to new customers',
                                  recommender_id=None)
 
 
 def create_abandoned_cart_email_template():
     return create_email_template(abandoned_cart_template_name, 'abandoned-cart-email-template',
-                                 subject='Retail Demo Store - Motivation to Complete Your Order',
+                                 subject='Edtech Demo - Motivation to Complete Your Order',
                                  description='Abandoned cart email template',
                                  recommender_id=None)
 
 
 def create_recommendations_email_template(recommender_id):
     return create_email_template(recommendations_template_name, 'recommendations-email-template',
-                                 subject='Retail Demo Store - Products Just for You',
+                                 subject='Edtech Demo - Products Just for You',
                                  description='Personalized recommendations email template',
                                  recommender_id=recommender_id)
 
@@ -176,7 +176,7 @@ def create_location_abandoned_cart_email_template():
 
 def create_location_offers_email_template(recommender_id):
     return create_email_template(location_offers_recommendations_template_name, 'location-offers-email-template',
-                                 subject="You're close to Retail Demo Store! -"
+                                 subject="You're close to Edtech Demo! -"
                                          " visit our store today to redeem this offer",
                                  description='Personalized recommendations email template',
                                  recommender_id=recommender_id)
@@ -185,7 +185,7 @@ def create_location_offers_email_template(recommender_id):
 def create_location_abandoned_cart_sms_template():
     return create_sms_template(location_abandoned_cart_template_name,
                                body='Hi {{User.UserAttributes.FirstName}}! You have items in your shopping cart. '
-                                    'Grab them now at your local AWS Retail Demo store!',
+                                    'Grab them now at your local AWS Edtech Demo!',
                                description='Abandoned cart SMS template', recommender_id=None)
 
 
@@ -199,7 +199,7 @@ def create_location_offers_sms_template(recommender_id):
 
 def create_recommendation_sms_template(recommender_id):
     return create_sms_template(sms_recommendation_template_name,
-                               body='Retail Demo Store \n'
+                               body='Edtech Demo \n'
                                     ' TOP PICK Just For you \n'
                                     ' Shop Now: {{Recommendations.URL.[0]}}',
                                description='Personalized recommendations SMS template',
@@ -237,7 +237,7 @@ def create_recommender(pinpoint_personalize_role_arn, personalize_campaign_arn, 
                 'Recommendations.Price': 'Product Price',
                 'Recommendations.ImageURL': 'Product Image URL'
             },
-            'Description': 'Retail Demo Store Personalize recommender for Pinpoint',
+            'Description': 'Edtech Demo Personalize recommender for Pinpoint',
             'Name': recommender_name,
             'RecommendationProviderIdType': 'PINPOINT_USER_ID',
             'RecommendationProviderRoleArn': pinpoint_personalize_role_arn,
@@ -277,7 +277,7 @@ def create_offers_recommender(pinpoint_personalize_role_arn, personalize_campaig
                 'Recommendations.OfferCode': 'Coupon offer code',
                 'Recommendations.OfferDescription': 'Coupon offer description',
             },
-            'Description': 'Retail Demo Store Personalize recommender for Pinpoint',
+            'Description': 'Edtech Demo Personalize recommender for Pinpoint',
             'Name': offers_recommender_name,
             'RecommendationProviderIdType': 'PINPOINT_USER_ID',
             'RecommendationProviderRoleArn': pinpoint_personalize_role_arn,
@@ -591,7 +591,7 @@ def lambda_handler(event, context):
     offers_lambda_function_arn = os.environ['pinpoint_offers_recommender_arn']
     pinpoint_personalize_role_arn = os.environ['pinpoint_personalize_role_arn']
     email_from_address = os.environ['email_from_address']
-    email_from_name = os.environ.get('email_from_name', 'AWS Retail Demo Store')
+    email_from_name = os.environ.get('email_from_name', 'AWS Edtech Demo')
     # Info on CloudWatch event rule used to repeatedely call this function.
     lambda_event_rule_name = os.environ['lambda_event_rule_name']
 

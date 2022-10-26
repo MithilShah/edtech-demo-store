@@ -8,7 +8,7 @@ Resources:
   CleanupBucketLambdaFunction:
     Type: 'AWS::Lambda::Function'
     Properties:
-      Description: 'Retail Demo Store deployment utility function that deletes all objects in an S3 bucket when the CloudFormation stack is deleted'
+      Description: 'EdTech Demo deployment utility function that deletes all objects in an S3 bucket when the CloudFormation stack is deleted'
       Code:
         ZipFile: |
           import boto3

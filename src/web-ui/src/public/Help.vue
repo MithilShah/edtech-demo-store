@@ -86,7 +86,7 @@ export default {
       this.checkingBackend = true
 
       try {
-        await Interactions.send(this.chatbotConfig.bot, 'Hey Retail Demo Store');
+        await Interactions.send(this.chatbotConfig.bot, 'Hey EdTech Demo');
         this.backendConfigured = true
       }
       catch(err) {
@@ -104,7 +104,7 @@ export default {
       let config = {
         bot: process.env.VUE_APP_BOT_NAME,
         clearComplete: false,
-        botTitle: "Retail Demo Store Support",
+        botTitle: "EdTech Demo Support",
         conversationModeOn: false,
         voiceEnabled: false,
         textEnabled: true

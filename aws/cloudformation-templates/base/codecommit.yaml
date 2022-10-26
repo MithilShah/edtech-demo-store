@@ -2,7 +2,7 @@
 AWSTemplateFormatVersion: 2010-09-09
 
 Description: >
-    This template deploys the Retail Demo Store S3 CodeCommit Repo.
+    This template deploys the EdTech Demo S3 CodeCommit Repo.
 
 Parameters:
   ResourceBucket:
@@ -15,7 +15,7 @@ Parameters:
 
   SourceDeploymentType:
     Type: String
-    Description: Retail Demo Store source deployment type
+    Description: EdTech Demo source deployment type
     AllowedValues:
       - 'GitHub'
       - 'CodeCommit'
@@ -31,7 +31,7 @@ Resources:
     Type: AWS::CodeCommit::Repository
     Properties:
       RepositoryName: retaildemostore-src
-      RepositoryDescription: CodeCommit Repo for the Retail Demo Store source code
+      RepositoryDescription: CodeCommit Repo for the EdTech Demo source code
       Code:
         S3:
           Bucket: !Ref ResourceBucket

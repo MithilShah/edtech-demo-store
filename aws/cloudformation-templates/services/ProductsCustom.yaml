@@ -2,7 +2,7 @@
 AWSTemplateFormatVersion: 2010-09-09
 
 Description: >
-    This template deploys specific resources for Products for the Retail Demo Store Services.
+    This template deploys specific resources for Products for the Edtech Demo Services.
     Author: Bastien Leblanc <bastil@amazon.co.uk>
 
 Parameters:
@@ -68,7 +68,7 @@ Resources:
   LoadDataLambdaFunction:
     Type: AWS::Lambda::Function
     Properties:
-      Description: 'Retail Demo Store deployment utility function that loads product and category information into DynamoDB tables'
+      Description: 'Edtech Demo deployment utility function that loads product and category information into DynamoDB tables'
       Handler: 'main'
       Role: !GetAtt LoadDataLambdaRole.Arn
       Runtime: go1.x

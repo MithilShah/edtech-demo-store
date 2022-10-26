@@ -1,7 +1,7 @@
 AWSTemplateFormatVersion: 2010-09-09
 
 Description: >
-    This template deploys the Retail Demo Store Swagger UI deployment pipeline.
+    This template deploys the EdTech Demo Swagger UI deployment pipeline.
 
 Parameters:
   ResourceBucket:
@@ -22,13 +22,13 @@ Parameters:
 
   SwaggerUIRootUrl:
     Type: String
-    Description: Public facing root URL where the Retail Demo Store Swagger UI is served. Used when building fully qualified URLs for the web user interface.
+    Description: Public facing root URL where the EdTech Demo Swagger UI is served. Used when building fully qualified URLs for the web user interface.
     AllowedPattern: "^https?://[^\\s/$.?#].[^\\s]*$"
     ConstraintDescription: Must be a valid URL referring to the root domain where web assets are located
 
   SourceDeploymentType:
     Type: String
-    Description: Retail Demo Store source deployment type
+    Description: EdTech Demo source deployment type
     AllowedValues:
       - 'GitHub'
       - 'CodeCommit'
@@ -194,7 +194,7 @@ Resources:
       BucketName: !Ref ArtifactBucket
 
   CodeBuildProject:
-    Description: Retail Demo Store CodeBuild project for Swagger UI
+    Description: EdTech Demo CodeBuild project for Swagger UI
     Type: 'AWS::CodeBuild::Project'
     Properties:
       Name: !Ref AWS::StackName

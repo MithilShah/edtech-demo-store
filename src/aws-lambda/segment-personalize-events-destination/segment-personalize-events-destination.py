@@ -34,7 +34,7 @@ def lambda_handler(event, context):
     # in the Personalize destination in Segment.
     try:
         if ('anonymousId' in event or 'userId' in event and 'properties' in event):
-            # Make sure this event contains an itemId since this is required for the Retail Demo Store
+            # Make sure this event contains an itemId since this is required for the Edtech Demo
             # dataset - you can also check for specific event names here if needed, and only pass the ones
             # that you want to use in the training dataset
             if (not 'productId' in event['properties']):

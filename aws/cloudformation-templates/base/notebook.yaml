@@ -2,7 +2,7 @@
 AWSTemplateFormatVersion: 2010-09-09
 
 Description: >
-    This template deploys the Retail Demo Store SageMaker Notebook Instances.
+    This template deploys the Edtech Demo SageMaker Notebook Instances.
 
 Parameters:
   ResourceBucket:

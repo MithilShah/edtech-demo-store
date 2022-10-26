@@ -1,4 +1,4 @@
-Hi, {{User.UserAttributes.FirstName}}. Greetings from the Retail Demo Store!
+Hi, {{User.UserAttributes.FirstName}}. Greetings from the EdTech Demo!
 
 Here are a few products inspired by your shopping trends:
 
@@ -20,4 +20,4 @@ Here are a few products inspired by your shopping trends:
 
 Stop by our store to checkout these offers and many other great selections! 
 
--Retail Demo Store
+-EdTech Demo

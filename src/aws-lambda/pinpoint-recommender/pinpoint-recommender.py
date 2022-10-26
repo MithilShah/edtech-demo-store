@@ -19,7 +19,7 @@ def lambda_handler(event, context):
     the specified Amazon Personalize campaign to get product recommendations. Since 
     the recommendations from Personalize only include item IDs, Pinpoint calls this 
     function to associate more rich/useful metadata on each item. This function 
-    uses the Retail Demo Store's Product service to retrieve details on each recommended
+    uses the Edtech Demo's Product service to retrieve details on each recommended
     item/product.
     ''' 
 

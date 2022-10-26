@@ -3,7 +3,7 @@ info:
   title: Location API
   version: v1
   description: |- 
-    The location web service provides an API for retrieving store locations and customer routes to support to Location Services demo in the Retail Demo Store.
+    The location web service provides an API for retrieving store locations and customer routes to support to Location Services demo in the Edtech Demo.
 
     To use the demo, see "Retail Geofencing and Location-aware Personalization" in the in-app Demo Guide.  
 

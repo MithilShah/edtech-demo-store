@@ -3,7 +3,7 @@
     <h1 class="heading">Demo guide</h1>
 
     <p>
-      The Retail Demo Store has been designed to be a stand-alone tool that provides the necessary instructions to use
+      The EdTech Demo has been designed to be a stand-alone tool that provides the necessary instructions to use
       this demo without relying on external documentation. The demo guide is located at the bottom of your browser
       window (blue tab).
     </p>
@@ -17,7 +17,7 @@
 
       <div class="services">
         <div id="demo-guide-services" class="mb-2 pr-2 d-inline-block" ref="services">
-          Services and use cases enabled in the Retail Demo Store demo
+          Services and use cases enabled in the EdTech Demo demo
         </div>
 
         <ul aria-labelledby="demo-guide-services" class="service-list d-flex pl-0">

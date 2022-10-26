@@ -1,8 +1,8 @@
-# Retail Demo Store Search Service
+# Edtech Demo Search Service
 
 The Search web service provides a RESTful API for retrieving product information based on a search term. The [Web UI](../web-ui) makes calls to this service when a user performs a search. Internally, this service makes calls to an [OpenSearch](https://opensearch.org/) cluster for search results. When deployed on AWS, [Amazon OpenSearch Service](https://aws.amazon.com/opensearch-service/) is used. When deployed locally, a local OpenSearch node is used for searches.
 
-When the Search service and Amazon OpenSearch are initially deployed to your AWS account, product information is not present in an index and therefore searches from the Web UI will not return results. There are two options for indexing products in OpenSearch when deploying to AWS. First, when deploying the Retail Demo Store project, the CloudFormation template has an option to index the product catalog in OpenSearch as part of the deployment process. The second option is to step through the [Search](../../workshop/0-StartHere/Search.ipynb) workshop.
+When the Search service and Amazon OpenSearch are initially deployed to your AWS account, product information is not present in an index and therefore searches from the Web UI will not return results. There are two options for indexing products in OpenSearch when deploying to AWS. First, when deploying the Edtech Demo project, the CloudFormation template has an option to index the product catalog in OpenSearch as part of the deployment process. The second option is to step through the [Search](../../workshop/0-StartHere/Search.ipynb) workshop.
 
 When deployed to AWS, CodePipeline is used to build and deploy the Search service as a Docker container to Amazon ECS behind an Application Load Balancer. The Search service can also be run locally in a Docker container. This makes it easier to iterate on and test changes locally before commiting.
 

@@ -6,7 +6,7 @@
 
     <p>
       To showcase how Amazon Personalize tailors product recommendations based on a user’s historical and real time
-      click-through behavior, the Retail Demo Store includes several fictitious shoppers, each with different shopping
+      click-through behavior, the EdTech Demo includes several fictitious shoppers, each with different shopping
       preferences.
     </p>
 

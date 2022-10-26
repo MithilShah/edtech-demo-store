@@ -1,11 +1,11 @@
 # User Data Generator
 
-[generate_users_json.py](./generate_users_json.py) generates a set of users for the Retail Demo Store.
+[generate_users_json.py](./generate_users_json.py) generates a set of users for the Edtech Demo.
 
 These user profiles are used in the following ways:
 
-* The [Users service](../src/users) provides login services to the user profiles that this creates for the Retail Demo Store
-* Workshops which need to generate simulated user behavior data can use the datagenerator library to create simulated events for these user profiles after they are created.  This provides realistic and consistent data across all integrated tools in the Retail Demo Store.
+* The [Users service](../src/users) provides login services to the user profiles that this creates for the Edtech Demo
+* Workshops which need to generate simulated user behavior data can use the datagenerator library to create simulated events for these user profiles after they are created.  This provides realistic and consistent data across all integrated tools in the Edtech Demo.
 
 ## datagenerator Library
 

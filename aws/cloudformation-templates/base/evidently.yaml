@@ -2,7 +2,7 @@
 AWSTemplateFormatVersion: 2010-09-09
 
 Description: >
-    This template deploys the Retail Demo Store Evidently project and features.
+    This template deploys the Edtech Demo Evidently project and features.
 
 Parameters:
   Uid:
@@ -13,7 +13,7 @@ Resources:
     Type: AWS::Evidently::Project
     Properties:
       Name: !Ref Uid
-      Description: Retail Demo Store features and experiments
+      Description: Edtech Demo features and experiments
 
   FeatureHomeProductRecs:
     Type: AWS::Evidently::Feature
@@ -118,7 +118,7 @@ Resources:
   EvidentlyCleanupLambdaFunction:
     Type: AWS::Lambda::Function
     Properties:
-      Description: 'Retail Demo Store deployment utility function that cancels and deletes experiments to allow project to be fully deleted'
+      Description: 'Edtech Demo deployment utility function that cancels and deletes experiments to allow project to be fully deleted'
       Code:
         ZipFile: |
           import boto3

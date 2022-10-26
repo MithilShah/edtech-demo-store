@@ -3,7 +3,7 @@
     <h1 class="heading"><img src="/pinpoint.svg" alt="" class="pinpoint-logo mr-2" />Amazon Pinpoint</h1>
 
     <p>
-      The Retail Demo Store allows you to showcase real time personalization based on shopping behavior across multiple
+      The EdTech Demo allows you to showcase real time personalization based on shopping behavior across multiple
       channels of engagement (online store, email and SMS).
     </p>
 

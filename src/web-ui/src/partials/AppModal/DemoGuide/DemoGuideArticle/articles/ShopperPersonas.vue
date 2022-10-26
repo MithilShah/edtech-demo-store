@@ -3,8 +3,8 @@
     <template #heading>Shopper Personas</template>
 
     <p>
-      To provide a more compelling and intuitive demo experience, each fictitious user in the Retail Demo Store is
-      assigned a shopper persona. The persona is represented by three categories from the Retail Demo Store’s catalog
+      To provide a more compelling and intuitive demo experience, each fictitious user in the EdTech Demo is
+      assigned a shopper persona. The persona is represented by three categories from the EdTech Demo’s catalog
       which the user has an affinity. The affinity for each category is also weighted such that the first category is is
       highest weighted and the third category is the lowest. There are sixteen combinations of categories that represent
       the personas used across all users.

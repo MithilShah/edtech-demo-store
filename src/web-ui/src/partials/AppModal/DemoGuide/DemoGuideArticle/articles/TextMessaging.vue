@@ -29,14 +29,14 @@
           <li>Subscribe to a long-code or phone number that supports SMS through the Pinpoint UI so that Pinpoint has a number
             to send messages from.
             <ol>
-              <li>Go to your <a href="https://console.aws.amazon.com/pinpoint">Pinpoint AWS console</a> in the region into which Retail Demo Store is deployed.</li>
+              <li>Go to your <a href="https://console.aws.amazon.com/pinpoint">Pinpoint AWS console</a> in the region into which EdTech Demo is deployed.</li>
               <li>Choose "Settings ... SMS" or "Settings...  Voice and SMS"</li>
               <li>Click "Request phone number", choosing "United States" for the country.</li>
               <li>Ensure the number type is "Toll-free" and that "SMS" option is checked.</li>
               <li>Click "Next" then "Request".</li>
             </ol>
           </li>
-          <li>Enable two-way SMSs to enable Retail Demo Store to receive messages sent to the dedicated number and opt in users.
+          <li>Enable two-way SMSs to enable EdTech Demo to receive messages sent to the dedicated number and opt in users.
             <ol>
               <li>Go back to "Settings ... SMS" or "Settings...  Voice and SMS"</li>
               <li>Click on your newly registered phone number under "Number settings"</li>
@@ -45,12 +45,12 @@
               which was put there by CloudFormation when you deployed your store. </li>
               </ol>
           </li>
-          <li>Tell Retail Demo Store about the phone number you have acquired.
+          <li>Tell EdTech Demo about the phone number you have acquired.
             <ol>
-              <li>So that Retail Demo Store can make use of the dedicated number you acquired above, take note of the number
-                and navigate to <a href="https://console.aws.amazon.com/systems-manager/home">Systems Manager AWS console</a> in the region Retail Demo Store is deployed.</li>
+              <li>So that EdTech Demo can make use of the dedicated number you acquired above, take note of the number
+                and navigate to <a href="https://console.aws.amazon.com/systems-manager/home">Systems Manager AWS console</a> in the region EdTech Demo is deployed.</li>
               <li>Find the parameter named "retaildemostore-pinpoint-sms-longcode" and click on "edit", then enter the value for your dedicated the phone number (including the country code as in `+11234567890`).
-              You may also enter this information when deploying Retail Demo Store with CloudFormation.</li>
+              You may also enter this information when deploying EdTech Demo with CloudFormation.</li>
             </ol>
           </li>
         </ol>
@@ -71,7 +71,7 @@
 
       <p>
         Next, you’ll receive one text message with one personalized product recommendation. The message will include a URL
-        that will redirect you to the Retail Demo Store
+        that will redirect you to the EdTech Demo
       </p>
   </ArticleLayout>
 </template>

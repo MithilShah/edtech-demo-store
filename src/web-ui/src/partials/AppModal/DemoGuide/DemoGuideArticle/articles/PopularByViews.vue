@@ -21,7 +21,7 @@
     <p>
       Popular by Views is implemented used on the homepage to display popular items when there is not browsing
       history for the current user (i.e. cold user). Once the known or anonymous user has more than three interactions (this
-      is an arbitrary number chosen in the Retail Demo Store's implementation), the storefront will switch to a personalized
+      is an arbitrary number chosen in the EdTech Demo's implementation), the storefront will switch to a personalized
       recommendation using the Recommended For You retail recommender. You can tell when this transition is made when the homepage
       grid header changes from "Popular products" to "Inspired by your shopping trends".
     </p>

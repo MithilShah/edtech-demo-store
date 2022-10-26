@@ -2,7 +2,7 @@
 AWSTemplateFormatVersion: 2010-09-09
 
 Description: >
-    This template deploys the Retail Demo Store Service Discovery Namespace.
+    This template deploys the Edtech Demo Service Discovery Namespace.
 
 Parameters:
   VpcId:
@@ -14,7 +14,7 @@ Resources:
   ServiceDiscoveryNamespace:
     Type: AWS::ServiceDiscovery::PrivateDnsNamespace
     Properties:
-      Description: Cloud Map private DNS namespace for resources for the Retail Demo Store
+      Description: Cloud Map private DNS namespace for resources for the Edtech Demo
       Vpc: !Ref VpcId
       Name: retaildemostore.local
 

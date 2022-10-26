@@ -3,7 +3,7 @@
     <template #heading>Datasets</template>
 
     <p>
-      The Retail Demo Store uses all
+      The EdTech Demo uses all
       <a
         href="https://docs.aws.amazon.com/personalize/latest/dg/how-it-works-dataset-schema.html"
         target="_blank"
@@ -12,7 +12,7 @@
       >
       for Amazon Personalize: users, items, and interactions. Additionally, an Amazon Personalize Event Tracker is
       utilized to capture real-time events in the web user interface which populate the Personalize-managed event
-      interactions dataset. AWS Amplify is used to send events to the Retail Demo Store’s Personalize Event Tracker.
+      interactions dataset. AWS Amplify is used to send events to the EdTech Demo’s Personalize Event Tracker.
     </p>
 
     <p>

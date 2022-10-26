@@ -2,7 +2,7 @@
   <section v-if="isPinpointEnabled && user" class="section container p-4">
     <h1 class="heading mb-1">Join <span class="text-alerts">text alerts</span> and get 20% off</h1>
     <p class="mb-3">
-      Enter your mobile number to receive texts about the Retail Demo Store, including Amazon Pinpoint.
+      Enter your mobile number to receive texts about the EdTech Demo, including Amazon Pinpoint.
     </p>
     <form @submit.prevent="onSubmit" class="mb-2 form">
       <div class="mb-2 d-flex justify-content-center align-items-stretch">
@@ -22,9 +22,9 @@
         <input type="checkbox" class="consent-checkbox mr-2" id="text-alerts-consent" v-model="hasConsented" />
         <label class="" for="text-alerts-consent"
           >I consent to receive automated text messages (including marketing messages) from or on behalf of Amazon Web
-          Services about the Retail Demo Store, including Amazon Pinpoint, at my mobile number above. Consent is not a
+          Services about the EdTech Demo, including Amazon Pinpoint, at my mobile number above. Consent is not a
           condition of any purchase. Message and data rates may apply. Amazon Web Services will only use data entered
-          for demonstrating features within the Retail Demo Store.</label
+          for demonstrating features within the EdTech Demo.</label
         >
       </div>
 

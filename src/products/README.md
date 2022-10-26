@@ -1,4 +1,4 @@
-# Retail Demo Store Products Service
+# Edtech Demo Products Service
 
 The Products web service provides a RESTful API for retrieving product information. The [Web UI](../web-ui) makes calls to this service when a user is viewing products and categories and the Personalize workshop connects to this service to retrieve product information for building the items dataset.
 

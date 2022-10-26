@@ -5,16 +5,16 @@
     <p>
       The
       <a href="https://github.com/aws-samples/retail-demo-store" target="_blank" rel="noreferrer noopener"
-        >Retail Demo Store</a
+        >EdTech Demo</a
       >
       is an open source solution which integrates Amazon Personalize, Amazon Pinpoint and Amazon Lex in a retail web
-      application demo and workshop platform. The Retail Demo Store is intended to be used as an education tool (not
+      application demo and workshop platform. The EdTech Demo is intended to be used as an education tool (not
       designed for production usage) for AWS customers to demonstrate how AWS can be used to build compelling customer
       experiences for eCommerce, Retail and Digital Marketing use cases.
     </p>
 
     <p>
-      The Retail Demo Store is a fictitious online store that includes users (shoppers), products, carts and orders as
+      The EdTech Demo is a fictitious online store that includes users (shoppers), products, carts and orders as
       well as services for search and recommendations and it helps demonstrate how the product recommendations change
       based on shopper’s preferences, real-time behavior and history.
     </p>
@@ -34,7 +34,7 @@
       <h2 class="section-heading">Architecture</h2>
 
       <p>
-        The core of the Retail Demo Store is a polyglot microservice architecture deployed as a collection of RESTful
+        The core of the EdTech Demo is a polyglot microservice architecture deployed as a collection of RESTful
         web services in Amazon Elastic Container Service (ECS). Several AWS managed services are leveraged to provide
         build, deployment, authentication, messaging, search, and personalization capabilities. The web user interface
         is a single page application built using responsive web design frameworks and techniques, producing a native
@@ -48,14 +48,14 @@
         for details.
       </p>
 
-      <div class="my-4"><img src="/rds-architecture.png" alt="Retail Demo Store architecture" class="img-fluid" /></div>
+      <div class="my-4"><img src="/rds-architecture.png" alt="EdTech Demo architecture" class="img-fluid" /></div>
     </section>
 
     <section class="my-4">
-      <h2 class="section-heading">How the Retail Demo Store works</h2>
+      <h2 class="section-heading">How the EdTech Demo works</h2>
 
       <p>
-        The Retail Demo Store is designed to display how personalization works and the impact it can have on a shoppers
+        The EdTech Demo is designed to display how personalization works and the impact it can have on a shoppers
         experience. The demo has two main components: first, the storefront user interface and second, the demo guide
         which walks the user through all the different components of the web application demo. .
       </p>

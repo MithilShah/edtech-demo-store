@@ -8,7 +8,7 @@
       <div class="consent d-flex align-items-start text-left">
         <input type="checkbox" class="consent-checkbox mr-2" id="abandon-cart-consent" v-model="hasConsented" />
         <label for="abandon-cart-consent"
-          >Yes, I’d like Amazon Web Services (AWS) to share information about the Retail Demo Store, including Amazon
+          >Yes, I’d like Amazon Web Services (AWS) to share information about the EdTech Demo, including Amazon
           Pinpoint, with me by email.</label
         >
       </div>

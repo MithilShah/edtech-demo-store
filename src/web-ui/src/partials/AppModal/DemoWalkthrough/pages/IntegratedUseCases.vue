@@ -2,7 +2,7 @@
   <DemoWalkthroughPageLayout :drawArrows="drawArrows">
     <h1 class="heading">Use cases integrated in this demo</h1>
 
-    <p>There are multiple personalization use cases implemented across several places within the Retail Demo Store</p>
+    <p>There are multiple personalization use cases implemented across several places within the EdTech Demo</p>
 
     <ul>
       <li>User personalization</li>

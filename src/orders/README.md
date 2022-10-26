@@ -1,4 +1,4 @@
-# Retail Demo Store Orders Service
+# Edtech Demo Orders Service
 
 The Orders web service provides a RESTful API for creating and retrieving orders. The [Web UI](../web-ui) makes calls to this service when a user goes through the checkout process or when viewing their orders.
 

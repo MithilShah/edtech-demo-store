@@ -5,7 +5,7 @@ info:
   description: |- 
     The Users web service provides a RESTful API for creating, updating, and retrieving users. The [Web UI](../../web-ui) makes calls to this service. 
     
-    The users in this service is not related to Cognito user pool that we signed up to use Retail Demo Store. They are the shopper persona that we can switch.
+    The users in this service is not related to Cognito user pool that we signed up to use Edtech Demo. They are the shopper persona that we can switch.
     When the system is deployed, 6000 users are generated and stored in this service. The users are initially "unclaimed". We can find unclaimed users via two APIs:
     
     1. /users/random - Return an array of random unclaimed users

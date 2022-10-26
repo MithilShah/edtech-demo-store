@@ -1,6 +1,6 @@
 <template>
   <DemoWalkthroughPageLayout class="page-container text-center" :showNav="false">
-    <h1 class="heading mb-4">Welcome to the Retail Demo Store tour!</h1>
+    <h1 class="heading mb-4">Welcome to the EdTech Demo tour!</h1>
     <p class="text mb-5">
       Take our guided tour to get familiar with the demo. We'll show you the tasks and elements we recommend to use to
       see the power of user personalization.

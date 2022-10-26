@@ -1,10 +1,10 @@
-# Creating a Retail Demo Store account
+# Creating a Edtech Demo account
 
 1 - Creating the Account > [2 - Personalization](2-Personalization.md)
 
 > Before getting started, we advise you to use a Private Window (Firefox) or Incognito Window (Chrome) to make sure you don't mix different demo profiles in the same browser session
 
-Since several of the features of the Retail Demo Store require a user/customer account to demonstrate effectively, this section will describe the process of creating a user account using the Retail Demo Store’s web user interface. This process also provides a good demonstration of how Amazon Cognito is used to implement user account and authentication.
+Since several of the features of the Edtech Demo require a user/customer account to demonstrate effectively, this section will describe the process of creating a user account using the Edtech Demo’s web user interface. This process also provides a good demonstration of how Amazon Cognito is used to implement user account and authentication.
 
 Click the “Sign In” button in the right side of the top navigation bar. This will take you to the Sign In page. Click the “Create account” link at the bottom of the Sign In form as shown below. These forms are provided by Cognito.
 
@@ -18,7 +18,7 @@ Complete the “Sign Up Account” form by entering appropriate values in each f
 
 Figure 4. Create Account page.
 
-Within a few seconds after pressing the “Create Account” button on the “Sign Up Account” form you should receive an email on the provided email address. The email will contain a 6-digit confirmation code. Enter this code on the “Confirm Sign Up” form and press the “Confirm” button. If you don’t receive a confirmation code, you can have it resent or you can manually confirm your user account in the Amazon Cognito User Pool page in the AWS console in the AWS account where the Retail Demo Store instance has been deployed.
+Within a few seconds after pressing the “Create Account” button on the “Sign Up Account” form you should receive an email on the provided email address. The email will contain a 6-digit confirmation code. Enter this code on the “Confirm Sign Up” form and press the “Confirm” button. If you don’t receive a confirmation code, you can have it resent or you can manually confirm your user account in the Amazon Cognito User Pool page in the AWS console in the AWS account where the Edtech Demo instance has been deployed.
 
 ![image.png](../workshop/images/retaildemostore-confirm.png)
 

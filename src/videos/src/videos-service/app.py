@@ -147,7 +147,7 @@ def log_ffmpeg_processes():
 
 def put_ivs_metadata(channel_arn, line):
     """
-        Sends metadata to a given IVS stream. Metadata can be any string, but the AWS Retail Demo Store UI expects
+        Sends metadata to a given IVS stream. Metadata can be any string, but the AWS Edtech Demo UI expects
         metadata of the format {"productId":"<product-id>"}
     """
     try:

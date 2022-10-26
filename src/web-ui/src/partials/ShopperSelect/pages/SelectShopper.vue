@@ -7,7 +7,7 @@
     </p>
 
     <div class="form-container p-4">
-      <div class="mb-4">Use the controls below to select a shopper from the Retail Demo Store user dataset.</div>
+      <div class="mb-4">Use the controls below to select a shopper from the EdTech Demo user dataset.</div>
 
       <form @submit.prevent="onSubmit" class="form">
         <div class="form-group d-flex align-items-center">

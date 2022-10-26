@@ -2,7 +2,7 @@
 AWSTemplateFormatVersion: 2010-09-09
 
 Description: >
-    This template deploys A Retail Demo Store Service Load Balancer.
+    This template deploys A Edtech Demo Service Load Balancer.
 
 Parameters:
   ServiceName:
@@ -120,7 +120,7 @@ Resources:
       Name: !Sub "/retaildemostore/services_load_balancers/${ServiceName}"
       Type: "String"
       Value: !Sub http://${LoadBalancer.DNSName} 
-      Description: !Sub "Load balancer URL for the Retail Demo Store ${ServiceName} service"
+      Description: !Sub "Load balancer URL for the Edtech Demo ${ServiceName} service"
 
 Outputs:
   TargetGroup:

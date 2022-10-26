@@ -35,7 +35,7 @@
         <p>
 
           To use the Amazon Location functionality, Location Services must be enabled in your region.
-          First, ensure you are deploying Retail Demo Store in a region in which
+          First, ensure you are deploying EdTech Demo in a region in which
           Location is enabled. Next, enable
           <span class="cloudformation-text">"Deploy Location Services resources"</span>
           and <span class="cloudformation-text">"Deploy personalized offers and
@@ -44,7 +44,7 @@
           A Location geofence will be set up for you.
         </p>
         <p>
-          From any Retail Demo Store "Shop" menu You can access the Location "In-Store View"
+          From any EdTech Demo "Shop" menu You can access the Location "In-Store View"
           where you can see orders made to be collected from in-store. From there you can navigate to
           "Location Geofence" where you can see the Location Services-provided map and simulated user
           - from here you can initiate
@@ -107,7 +107,7 @@
             to send messages from (this is a requirement in the USA to send messages).
           </li>
           <li>Enable 2-way messaging on that long-code and choose the SNS PinpointIncomingTextAlerts
-            topic that was deployed along with Retail Demo Store to send messages to, so that responses
+            topic that was deployed along with EdTech Demo to send messages to, so that responses
             to verification SMS messages can be processed to opt in users.
           </li>
           <li>Enter your phone number from the UI to start the verification process and reply to the text

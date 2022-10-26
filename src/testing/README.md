@@ -1,5 +1,5 @@
-#Retail Demo Store Test Helper Modules
-The Python package `testhelpers` in this folder exists to support the tests for each of the Retail Demo Store services by providing reusable methods.
+#Edtech Demo Test Helper Modules
+The Python package `testhelpers` in this folder exists to support the tests for each of the Edtech Demo services by providing reusable methods.
 
 The package contains the `integ` module. This provides helper methods for integration tests.
 

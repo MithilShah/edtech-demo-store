@@ -15,13 +15,13 @@
       Here,
       <ol class="bullets">
         <li class="bullet-point">
-          Pinpoint sends new users a welcome email after they sign up for a Retail Demo Store account. Check the email
-          entered during account creation and look for the Retail Demo Store welcome email. If you’d like to send the
+          Pinpoint sends new users a welcome email after they sign up for a EdTech Demo account. Check the email
+          entered during account creation and look for the EdTech Demo welcome email. If you’d like to send the
           email to a different email address, go to the Account settings page and enter the new one.
         </li>
 
         <li class="bullet-point">
-          When Retail Demo Store users add items to their shopping cart but do not complete an order, Amazon Pinpoint
+          When EdTech Demo users add items to their shopping cart but do not complete an order, Amazon Pinpoint
           send an email with a coupon code encouraging them to finish their order. To see this feature, add a few items
           to your shopping cart. In the shopping cart page, click on the button that says ”Trigger Abandoned Cart
           email”. This action will emulate a signed out event and will trigger the abandoned cart email sent by Amazon

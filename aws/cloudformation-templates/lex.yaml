@@ -1,7 +1,7 @@
 AWSTemplateFormatVersion: 2010-09-09
 
 Description: >
-    This template deploys the Retail Demo Store Lex related resources.
+    This template deploys the EdTech Demo Lex related resources.
 
 Parameters:
   ResourceBucket:
@@ -24,7 +24,7 @@ Resources:
   BotRecommendationsLambdaFunction:
     Type: 'AWS::Lambda::Function'
     Properties:
-      Description: 'Retail Demo Store chatbot function that returns product recommendations as ResponseCards'
+      Description: 'EdTech Demo chatbot function that returns product recommendations as ResponseCards'
       Handler: bot-intent-recommendations.lambda_handler
       Role: !GetAtt 
         - BotRecommendationsLambdaExecutionRole

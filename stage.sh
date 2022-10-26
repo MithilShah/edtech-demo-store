@@ -104,7 +104,7 @@ fi
 BUCKET_LOCATION="$(aws s3api get-bucket-location --bucket ${BUCKET}|grep ":"|cut -d\" -f4)"
 if [ -z "$BUCKET_LOCATION" ]; then
     BUCKET_DOMAIN="s3.amazonaws.com"
-    BUCKET_LOCATION="us-east-1"
+    BUCKET_LOCATION="us-west-2"
 else
     BUCKET_DOMAIN="s3-${BUCKET_LOCATION}.amazonaws.com"
 fi
@@ -115,23 +115,23 @@ find . -name '.DS_Store' -type f -delete
 echo " + Staging to $BUCKET in $S3PATH"
 
 echo " + Uploading CloudFormation Templates"
-aws s3 cp aws/cloudformation-templates/ s3://${BUCKET}/${S3PATH}cloudformation-templates --recursive $S3PUBLIC
+# aws s3 cp aws/cloudformation-templates/ s3://${BUCKET}/${S3PATH}cloudformation-templates --recursive $S3PUBLIC
 echo " For CloudFormation : https://${BUCKET_DOMAIN}/${BUCKET}/${S3PATH}cloudformation-templates/template.yaml"
 
 if [ "$only_cfn_template" = false ]; then
-    echo " + Packaging Source"
-    [ -e "retaildemostore-source.zip" ] && rm retaildemostore-source.zip
-    zip -qr retaildemostore-source.zip ./src/ -x "*.DS_Store" "*__pycache__*" "*/aws-lambda/*" "*/node_modules/*" "*.zip" "*/venv*"
+    # echo " + Packaging Source"
+    # [ -e "retaildemostore-source.zip" ] && rm retaildemostore-source.zip
+    # zip -qr retaildemostore-source.zip ./src/ -x "*.DS_Store" "*__pycache__*" "*/aws-lambda/*" "*/node_modules/*" "*.zip" "*/venv*"
 
-    echo " + Uploading Source"
-    aws s3 cp retaildemostore-source.zip s3://${BUCKET}/${S3PATH}source/retaildemostore-source.zip $S3PUBLIC
+    # echo " + Uploading Source"
+    # aws s3 cp retaildemostore-source.zip s3://${BUCKET}/${S3PATH}source/retaildemostore-source.zip $S3PUBLIC
 
-    echo " + Upload seed data"
-    aws s3 cp src/products/src/products-service/data/ s3://${BUCKET}/${S3PATH}data --recursive  $S3PUBLIC
-    aws s3 cp src/users/src/users-service/data/ s3://${BUCKET}/${S3PATH}data --recursive $S3PUBLIC
+    # echo " + Upload seed data"
+    # aws s3 cp src/products/src/products-service/data/ s3://${BUCKET}/${S3PATH}data --recursive  $S3PUBLIC
+    # aws s3 cp src/users/src/users-service/data/ s3://${BUCKET}/${S3PATH}data --recursive $S3PUBLIC
 
-    echo " + Upload IVS videos"
-    aws s3 cp videos/ s3://${BUCKET}/${S3PATH}videos --recursive $S3PUBLIC
+    # echo " + Upload IVS videos"
+    # aws s3 cp videos/ s3://${BUCKET}/${S3PATH}videos --recursive $S3PUBLIC
 
     if [ "$skip_generators" = false ]; then
         echo " + Generating CSVs for Personalize model pre-create training"

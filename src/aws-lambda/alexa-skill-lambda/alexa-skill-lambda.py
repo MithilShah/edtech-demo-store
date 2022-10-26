@@ -2,8 +2,8 @@
 # Copyright Amazon.com, Inc. or its affiliates. All Rights Reserved.
 # SPDX-License-Identifier: MIT-0
 
-# Back-end handler for the C-store demonstration in Retail Demo Store.
-# Can make use of Cognito authenticated Retail Demo Store users
+# Back-end handler for the C-store demonstration in Edtech Demo.
+# Can make use of Cognito authenticated Edtech Demo users
 # for retrieving user details, putting orders and sending emails.
 # Has Amazon Pay integration as well. As long as Amazon Pay is enabled on the
 # skill and the user is a sandbox user or developer account, we can test the integration.
@@ -145,7 +145,7 @@ def get_cognito_user_details(handler_input):
 
     except Exception as e:
         # Here, we allow for easy testing without having to do the authentication of Alexa with Cognito
-        # This is important if you want to test Retail Demo Store on the web because only the mobile app
+        # This is important if you want to test Edtech Demo on the web because only the mobile app
         # allows you to grab the authentication token from another provider
         # If there is a tester email set up with SANDBOX_CUSTOMER_EMAIL in .env
         # we use that for emails, otherwise you will unfortunately not
@@ -252,7 +252,7 @@ def send_order_confirm_email(handler_input, orders, add_images=True):
                 product = session_attr['Products'][item['product_id']]
                 img_url = product.get("image", "")
                 url = product.get("url", "")
-                name = product.get("name", "Retail Demo Store Product")
+                name = product.get("name", "Edtech Demo Product")
             if add_images and img_url and len(img_url) > 0:
                 img_tag = f'<img src="{img_url}" width="100px">'
             else:
@@ -968,7 +968,7 @@ class CheckoutIntentHandler(AbstractRequestHandler):
             if user_details['cognito_loaded']:
                 speak = ''
             else:
-                speak = ('Not authenticated as a retail demo store user with a simulated profile chosen -'
+                speak = ('Not authenticated as a Edtech Demo user with a simulated profile chosen -'
                          ' using configured default as Amazon Pay account. ')
 
             permissions_not_granted = (scopes is None or
@@ -1078,8 +1078,8 @@ class AmazonPaySetupResponseHandler(AbstractRequestHandler):
              seller_order_attributes = SellerOrderAttributes(
                  version="2",
                  seller_order_id=user_details['username'] + '-' + get_basket_id(handler_input),
-                 store_name="Retail Demo Store",
-                 custom_information="A Demo Transaction For Retail Demo Store",
+                 store_name="Edtech Demo",
+                 custom_information="A Demo Transaction For Edtech Demo",
                  seller_note="Congratulations on your purchase via Alexa and Amazon Pay at the C-Store demo!"
              )
             """
@@ -1094,7 +1094,7 @@ class AmazonPaySetupResponseHandler(AbstractRequestHandler):
                 version="2",
                 authorization_reference_id=cart['id'],
                 authorization_amount=authorization_amount,
-                seller_authorization_note="Retail Demo Store Sandbox Transaction",
+                seller_authorization_note="Edtech Demo Sandbox Transaction",
             )
 
             payment_action = PaymentAction('AuthorizeAndCapture')

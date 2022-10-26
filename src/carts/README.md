@@ -1,4 +1,4 @@
-# Retail Demo Store Carts Service
+# Edtech Demo Carts Service
 
 The Carts web service provides a RESTful API for adding, changing, and deleting shopping carts. The [Web UI](../web-ui) makes calls to this service as a user adds and removes products to their cart and during checkout.
 

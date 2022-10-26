@@ -15,7 +15,7 @@ for product and search personalization by completing the following steps.
 6. Create Solution and Solution Version for related items, item recommendations,
    and personalized reranking recipes.
 7. Create Campaigns for related items, item recommendations, and personalized reranking.
-8. Store Campaign ARNs in SSM parameters (which are used by Retail Demo Store services
+8. Store Campaign ARNs in SSM parameters (which are used by Edtech Demo services
    and workshops).
 
 The function has logic to skip completed steps and pick up where it left off
@@ -212,32 +212,32 @@ dataset_group_confs = [
         'eventTracker': {
             'name': 'retaildemostore-event-tracker',
             'param': '/retaildemostore/personalize/event-tracker-id',
-            'paramDescription': 'Retail Demo Store Personalize Event Tracker ID Parameter'
+            'paramDescription': 'Edtech Demo Personalize Event Tracker ID Parameter'
         },
         'filters': [
             {
                 'name': 'retaildemostore-filter-exclude-purchased-products',
                 'expression': 'EXCLUDE ItemID WHERE INTERACTIONS.event_type IN ("Purchase")',
                 'param': '/retaildemostore/personalize/filters/filter-purchased-arn',
-                'paramDescription': 'Retail Demo Store Filter Purchased Product Arn Parameter'
+                'paramDescription': 'Edtech Demo Filter Purchased Product Arn Parameter'
             },
             {
                 'name': 'retaildemostore-filter-cstore-products',
                 'expression': 'EXCLUDE ItemID WHERE ITEMS.CATEGORY_L1 NOT IN ("cold dispensed", "hot dispensed", "salty snacks", "food service")',
                 'param': '/retaildemostore/personalize/filters/filter-cstore-arn',
-                'paramDescription': 'Retail Demo Store Filter C-Store Products Arn Parameter'
+                'paramDescription': 'Edtech Demo Filter C-Store Products Arn Parameter'
             },
             {
                 'name': 'retaildemostore-filter-exclude-purchased-cstore-products',
                 'expression': 'EXCLUDE ItemID WHERE INTERACTIONS.event_type IN ("Purchase") | EXCLUDE ItemID WHERE ITEMS.CATEGORY_L1 IN ("cold dispensed", "hot dispensed", "salty snacks", "food service")',
                 'param': '/retaildemostore/personalize/filters/filter-purchased-and-cstore-arn',
-                'paramDescription': 'Retail Demo Store Filter Purchased and C-Store Products Arn Parameter'
+                'paramDescription': 'Edtech Demo Filter Purchased and C-Store Products Arn Parameter'
             },
             {
                 'name': 'retaildemostore-filter-include-categories',
                 'expression': 'EXCLUDE ItemID WHERE INTERACTIONS.event_type IN ("Purchase") | INCLUDE ItemID WHERE ITEMS.CATEGORY_L1 IN ($CATEGORIES)',
                 'param': '/retaildemostore/personalize/filters/filter-include-categories-arn',
-                'paramDescription': 'Retail Demo Store Filter to Include by Categories Arn Parameter'
+                'paramDescription': 'Edtech Demo Filter to Include by Categories Arn Parameter'
             }
         ],
         'recommenders': [
@@ -245,13 +245,13 @@ dataset_group_confs = [
                 'name': 'retaildemostore-recommended-for-you',
                 'recipe': 'arn:aws:personalize:::recipe/aws-ecomm-recommended-for-you',
                 'param': '/retaildemostore/personalize/recommended-for-you-arn',
-                'paramDescription': 'Retail Demo Store Recommended For You Campaign/Recommender Arn Parameter'
+                'paramDescription': 'Edtech Demo Recommended For You Campaign/Recommender Arn Parameter'
             },
             {
                 'name': 'retaildemostore-popular-items',
                 'recipe': 'arn:aws:personalize:::recipe/aws-ecomm-popular-items-by-views',
                 'param': '/retaildemostore/personalize/popular-items-arn',
-                'paramDescription': 'Retail Demo Store Popular Items Campaign/Recommender Arn Parameter'
+                'paramDescription': 'Edtech Demo Popular Items Campaign/Recommender Arn Parameter'
             }
         ],
         'solutions': [
@@ -262,7 +262,7 @@ dataset_group_confs = [
                 'campaign': {
                     'name': 'retaildemostore-related-items',
                     'param': '/retaildemostore/personalize/related-items-arn',
-                    'paramDescription': 'Retail Demo Store Related Items Campaign/Recommender Arn Parameter'
+                    'paramDescription': 'Edtech Demo Related Items Campaign/Recommender Arn Parameter'
                 }
             },
             {
@@ -272,7 +272,7 @@ dataset_group_confs = [
                 'campaign': {
                     'name': 'retaildemostore-personalized-ranking',
                     'param': '/retaildemostore/personalize/personalized-ranking-arn',
-                    'paramDescription': 'Retail Demo Store Personalized Ranking Campaign/Recommender Arn Parameter'
+                    'paramDescription': 'Edtech Demo Personalized Ranking Campaign/Recommender Arn Parameter'
                 }
             },
             {
@@ -297,7 +297,7 @@ if create_campaign_for_pinpoint:
         'campaign': {
             'name': 'retaildemostore-user-personalization',
             'param': '/retaildemostore/personalize/user-personalization-arn',
-            'paramDescription': 'Retail Demo Store User Personalization Campaign Arn Parameter'
+            'paramDescription': 'Edtech Demo User Personalization Campaign Arn Parameter'
         }
     })
 
@@ -320,7 +320,7 @@ if create_deploy_offers_campaign:
                 'campaign': {
                     'name': 'retaildemostore-personalized-offers',
                     'param': '/retaildemostore/personalize/personalized-offers-arn',
-                    'paramDescription': 'Retail Demo Store Personalized Offers Campaign/Recommender Arn Parameter'
+                    'paramDescription': 'Edtech Demo Personalized Offers Campaign/Recommender Arn Parameter'
                 }
             }
         ]

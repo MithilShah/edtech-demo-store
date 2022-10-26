@@ -2,7 +2,7 @@
 AWSTemplateFormatVersion: 2010-09-09
 
 Description: >
-  This template deploys the Retail Demo Store SSM Parameters.
+  This template deploys the Edtech Demo SSM Parameters.
 
 Parameters:
   StackBucketName:
@@ -87,7 +87,7 @@ Resources:
       Name: "retaildemostore-stack-bucket"
       Type: "String"
       Value: !Ref StackBucketName
-      Description: "Retail Demo Store Stack Bucket Parameter"
+      Description: "Edtech Demo Stack Bucket Parameter"
 
   ParameterPersonalizeRelatedItemsArn:
     Type: "AWS::SSM::Parameter"
@@ -95,7 +95,7 @@ Resources:
       Name: "/retaildemostore/personalize/related-items-arn"
       Type: "String"
       Value: "NONE"
-      Description: "Retail Demo Store Related Items Campaign/Recommender Arn Parameter"
+      Description: "Edtech Demo Related Items Campaign/Recommender Arn Parameter"
 
   ParameterPersonalizePopularItemsArn:
     Type: "AWS::SSM::Parameter"
@@ -103,7 +103,7 @@ Resources:
       Name: "/retaildemostore/personalize/popular-items-arn"
       Type: "String"
       Value: "NONE"
-      Description: "Retail Demo Store Popular Items Campaign/Recommender Arn Parameter"
+      Description: "Edtech Demo Popular Items Campaign/Recommender Arn Parameter"
 
   ParameterPersonalizeRecommendedForYouArn:
     Type: "AWS::SSM::Parameter"
@@ -111,7 +111,7 @@ Resources:
       Name: "/retaildemostore/personalize/recommended-for-you-arn"
       Type: "String"
       Value: "NONE"
-      Description: "Retail Demo Store Recommended For You Campaign/Recommender Arn Parameter"
+      Description: "Edtech Demo Recommended For You Campaign/Recommender Arn Parameter"
 
   ParameterPersonalizePersonalizedRankingArn:
     Type: "AWS::SSM::Parameter"
@@ -119,7 +119,7 @@ Resources:
       Name: "/retaildemostore/personalize/personalized-ranking-arn"
       Type: "String"
       Value: "NONE"
-      Description: "Retail Demo Store Personalized Ranking Campaign/Recommender Arn Parameter"
+      Description: "Edtech Demo Personalized Ranking Campaign/Recommender Arn Parameter"
 
   ParameterPersonalizePersonalizedOffersArn:
     Type: "AWS::SSM::Parameter"
@@ -127,7 +127,7 @@ Resources:
       Name: "/retaildemostore/personalize/personalized-offers-arn"
       Type: "String"
       Value: "NONE"
-      Description: "Retail Demo Store Personalized Coupon Offers Campaign/Recommender Arn Parameter"
+      Description: "Edtech Demo Personalized Coupon Offers Campaign/Recommender Arn Parameter"
 
   ParameterPersonalizeFilterPurchasedArn:
     Type: "AWS::SSM::Parameter"
@@ -135,7 +135,7 @@ Resources:
       Name: "/retaildemostore/personalize/filters/filter-purchased-arn"
       Type: "String"
       Value: "NONE"
-      Description: "Retail Demo Store Personalize Filter Purchased Products Arn Parameter"
+      Description: "Edtech Demo Personalize Filter Purchased Products Arn Parameter"
 
   ParameterPersonalizeFilterCStoreArn:
     Type: "AWS::SSM::Parameter"
@@ -143,7 +143,7 @@ Resources:
       Name: "/retaildemostore/personalize/filters/filter-cstore-arn"
       Type: "String"
       Value: "NONE"
-      Description: "Retail Demo Store Filter C-Store Products Arn Parameter"
+      Description: "Edtech Demo Filter C-Store Products Arn Parameter"
 
   ParameterPersonalizeFilterPurchasedAndCStoreArn:
     Type: "AWS::SSM::Parameter"
@@ -151,7 +151,7 @@ Resources:
       Name: "/retaildemostore/personalize/filters/filter-purchased-and-cstore-arn"
       Type: "String"
       Value: "NONE"
-      Description: "Retail Demo Store Filter Purchased and C-Store Products Arn Parameter"
+      Description: "Edtech Demo Filter Purchased and C-Store Products Arn Parameter"
 
   ParameterPersonalizeFilterIncludeCategoriesArn:
     Type: "AWS::SSM::Parameter"
@@ -159,7 +159,7 @@ Resources:
       Name: "/retaildemostore/personalize/filters/filter-include-categories-arn"
       Type: "String"
       Value: "NONE"
-      Description: "Retail Demo Store Filter to Include by Categories Arn Parameter"
+      Description: "Edtech Demo Filter to Include by Categories Arn Parameter"
 
   ParameterPersonalizeEventTrackerId:
     Type: "AWS::SSM::Parameter"
@@ -167,7 +167,7 @@ Resources:
       Name: "/retaildemostore/personalize/event-tracker-id"
       Type: "String"
       Value: "NONE"
-      Description: "Retail Demo Store Personalize Event Tracker ID Parameter"
+      Description: "Edtech Demo Personalize Event Tracker ID Parameter"
 
   ParameterExperimentStrategyTableName:
     Type: "AWS::SSM::Parameter"
@@ -175,7 +175,7 @@ Resources:
       Name: "retaildemostore-experiment-strategy-table-name"
       Type: "String"
       Value: !Ref ExperimentStrategyTableName
-      Description: "Retail Demo Store Experiment Strategy DDB Table Name"
+      Description: "Edtech Demo Experiment Strategy DDB Table Name"
 
   ParameterAmplitudeApiKey:
     Type: "AWS::SSM::Parameter"
@@ -183,7 +183,7 @@ Resources:
       Name: "retaildemostore-amplitude-api-key"
       Type: "String"
       Value: !If [HasAmplitudeApiKey, !Ref AmplitudeApiKey, "NONE"]
-      Description: "Retail Demo Store Amplitude API key"
+      Description: "Edtech Demo Amplitude API key"
 
   ParameterOptimizelySdkKey:
     Type: "AWS::SSM::Parameter"
@@ -191,7 +191,7 @@ Resources:
       Name: "retaildemostore-optimizely-sdk-key"
       Type: "String"
       Value: !If [HasOptimizelySdkKey, !Ref OptimizelySdkKey, "NONE"]
-      Description: "Retail Demo Store Optimizely SDK key"
+      Description: "Edtech Demo Optimizely SDK key"
 
   ParameterIVSVideoChannelMap:
     Type: "AWS::SSM::Parameter"
@@ -199,7 +199,7 @@ Resources:
       Name: "retaildemostore-ivs-video-channel-map"
       Type: "String"
       Value: "NONE"
-      Description: "Retail Demo Store video file to IVS channel mapping"
+      Description: "Edtech Demo video file to IVS channel mapping"
 
   ParameterSegmentWriteKey:
     Type: "AWS::SSM::Parameter"
@@ -207,7 +207,7 @@ Resources:
       Name: "retaildemostore-segment-write-key"
       Type: "String"
       Value: !If [HasSegmentWriteKey, !Ref SegmentWriteKey, "NONE"]
-      Description: "Retail Demo Store Segment source write key"
+      Description: "Edtech Demo Segment source write key"
 
   ParametermParticleOrgId:
     Type: "AWS::SSM::Parameter"
@@ -215,7 +215,7 @@ Resources:
       Name: "retaildemostore-mparticle-org-id"
       Type: "String"
       Value: !If [HasmParticleOrgId, !Ref mParticleOrgId, 'NONE']
-      Description: "Retail Demo Store mParticle org id"
+      Description: "Edtech Demo mParticle org id"
 
   ParametermParticleApiKey:
     Type: "AWS::SSM::Parameter"
@@ -223,7 +223,7 @@ Resources:
       Name: "/retaildemostore/webui/mparticle_api_key"
       Type: "String"
       Value: !If [HasmParticleApiKey, !Ref mParticleApiKey, 'NONE']
-      Description: "Retail Demo Store mParticle API key"
+      Description: "Edtech Demo mParticle API key"
 
   ParametermParticleSecretKey:
     Type: "AWS::SSM::Parameter"
@@ -231,7 +231,7 @@ Resources:
       Name: "/retaildemostore/webui/mparticle_secret_key"
       Type: "String"
       Value: !If [HasmParticleSecretKey, !Ref mParticleSecretKey, 'NONE']
-      Description: "Retail Demo Store mParticle secret key"
+      Description: "Edtech Demo mParticle secret key"
 
   ParametermParticleS2SApiKey:
     Type: "AWS::SSM::Parameter"
@@ -239,7 +239,7 @@ Resources:
       Name: "/retaildemostore/webui/mparticle_s2s_api_key"
       Type: "String"
       Value: !If [HasmParticleS2SApiKey, !Ref mParticleS2SApiKey, 'NONE']
-      Description: "Retail Demo Store mParticle server to server API key - used for Kinesis processing"
+      Description: "Edtech Demo mParticle server to server API key - used for Kinesis processing"
 
   ParametermParticleS2SSecretKey:
     Type: "AWS::SSM::Parameter"
@@ -247,7 +247,7 @@ Resources:
       Name: "/retaildemostore/webui/mparticle_s2s_secret_key"
       Type: "String"
       Value: !If [HasmParticleS2SSecretKey, !Ref mParticleS2SSecretKey, 'NONE']
-      Description: "Retail Demo Store mParticle server to server secret key - used for Kinesis processing"
+      Description: "Edtech Demo mParticle server to server secret key - used for Kinesis processing"
 
   ParameterPinpointSMSLongCode:
     Type: "AWS::SSM::Parameter"
@@ -255,7 +255,7 @@ Resources:
       Name: "retaildemostore-pinpoint-sms-longcode"
       Type: "String"
       Value: !If [HasPinpointSMSLongCode, !Ref PinpointSMSLongCode, "NONE"]
-      Description: "Retail Demo Store Pinpoint SMS Long code"
+      Description: "Edtech Demo Pinpoint SMS Long code"
 
   ParameterGoogleAnalyticsMeasurementId:
     Type: "AWS::SSM::Parameter"
@@ -268,7 +268,7 @@ Resources:
           !Ref GoogleAnalyticsMeasurementId,
           "NONE",
         ]
-      Description: "Retail Demo Store Google Analytics Measurement Id"
+      Description: "Edtech Demo Google Analytics Measurement Id"
 
 Outputs:
   ParameterStackBucketName:
@@ -312,7 +312,7 @@ Outputs:
     Value: !Ref ParameterOptimizelySdkKey
 
   ParameterIVSVideoChannelMap:
-    Description: Retail Demo Store video file to IVS channel mapping
+    Description: Edtech Demo video file to IVS channel mapping
     Value: !Ref ParameterIVSVideoChannelMap
 
   ParameterSegmentWriteKey:

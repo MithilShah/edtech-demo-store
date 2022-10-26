@@ -15,7 +15,7 @@ export default {
           "webCheckoutDetails": {
             // This is a truncated demo: instead of continuing the session, we route to the Amazon Pay instructions.
             // To enable the full process we need to handle the order review and downstream processing and
-            // a full HTTPS service on the Retail Demo Store.
+            // a full HTTPS service on the Edtech Demo.
             "checkoutReviewReturnUrl": 'https://developer.amazon.com/docs/amazon-pay-checkout/introduction.html'
           },
           "storeId": process.env.VUE_APP_AMAZON_PAY_STORE_ID,

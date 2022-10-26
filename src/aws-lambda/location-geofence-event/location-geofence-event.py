@@ -438,7 +438,7 @@ def send_pickup_email(to_email, orders):
     subheading = ""
     intro_text = """
     Welcome, 
-    We are waiting for you at Level 3, Door 2 of your Local Retail Demo Store, and Steve from our team will be greeting you with your following order(s): """
+    We are waiting for you at Level 3, Door 2 of your Local Edtech Demo, and Steve from our team will be greeting you with your following order(s): """
     html_intro_text = intro_text.replace('\n', '</p><p>')
 
     # Build the order list in text and HTML at the same time.
@@ -506,9 +506,9 @@ def send_pickup_sms(all_orders, add_order_details=False):
 
         if not add_order_details:
             if len(orders) > 1:
-                msg = "Your orders are ready for pickup from your local AWS Retail Demo store, level 3, door 2."
+                msg = "Your orders are ready for pickup from your local AWS Edtech Demo, level 3, door 2."
             else:
-                msg = "Your order is ready for pickup from your local AWS Retail Demo Store, level 3, door 2."
+                msg = "Your order is ready for pickup from your local AWS Edtech Demo, level 3, door 2."
         else:
             msg = ""
             if len(orders) > 1:
@@ -523,7 +523,7 @@ def send_pickup_sms(all_orders, add_order_details=False):
             else:
                 msg += " is "
 
-            msg += "ready for pickup from your local AWS retail demo store."
+            msg += "ready for pickup from your local AWS Edtech Demo."
 
         logger.info(f"Contents of SMS text: {msg} to {to_number}")
         try:
@@ -619,7 +619,7 @@ def handle_geofence_enter(event):
     # Here we trust the sending party to not be sending us the wrong user ID.
     cognito_user_id = location_device_id
 
-    user_pool_id = os.environ['UserPoolId']  # Cognito user pool for retail demo store.
+    user_pool_id = os.environ['UserPoolId']  # Cognito user pool for Edtech Demo.
 
     response = cognito_idp.admin_get_user(
         UserPoolId=user_pool_id,
@@ -688,7 +688,7 @@ def handle_geofence_enter(event):
 
 def lambda_handler(event, context):
     """
-    Lambda function to handle geofence enter exit events for retail demo store.
+    Lambda function to handle geofence enter exit events for Edtech Demo.
 
     Here is the structure of a Location enter event (an exit event also exists):
 

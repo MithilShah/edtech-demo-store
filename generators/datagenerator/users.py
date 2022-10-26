@@ -31,26 +31,14 @@ age_dist = truncnorm((age_min - age_mean) / age_sd, (age_max - age_mean) / age_s
 
 # Persona combinations ordered from strongest affinity to latent interest.
 category_preference_personas_web = (
-    'furniture_homedecor_housewares', 'apparel_footwear_accessories',
-    'instruments_books_electronics', 'floral_beauty_jewelry',
-    'groceries_seasonal_tools', 'outdoors_instruments_groceries',
-    'housewares_floral_seasonal', 'tools_housewares_apparel',
-    'electronics_outdoors_footwear', 'seasonal_furniture_floral',
-    'homedecor_electronics_outdoors', 'accessories_groceries_books',
-    'footwear_jewelry_furniture', 'books_apparel_homedecor',
-    'beauty_accessories_instruments', 'housewares_tools_beauty'
+    'english_history_maths', 'maths_python_regression',
+    'history_english_marketing', 'marketing_finance_maths',
+    'python_regression_clustering', 'maths_clustering_regression',
+    'history_finance_marketing'
 )
 
 category_preference_personas_cstore = (
-    'food service:pizza_cold dispensed:fountain-carbonated_salty snacks:nuts/seeds',
-    'food service:nachos_hot dispensed:hot chocolate_salty snacks:potato chips',
-    'food service:pizza_cold dispensed:fountain-carbonated_salty snacks:potato chips',
-    'food service:nachos_cold dispensed:fountain-carbonated_salty snacks:nuts/seeds',
-    'food service:pizza_cold dispensed:fountain-carbonated_cold dispensed:fountain-carbonated',
-    'food service:seafood_cold dispensed:fountain-non-carbonated_salty snacks:nuts/seeds',
-    'food service:seafood_food service:soup and salad_cold dispensed:fountain-non-carbonated',
-    'food service:other cuisine_food service:soup and salad_cold dispensed:fountain-non-carbonated',
-    'food service:other cuisine_food service:sandwiches/wraps_cold dispensed:fountain-non-carbonated'
+    
 )
 
 discount_personas = (
@@ -151,7 +139,7 @@ class User:
     self.age = int(age_dist.rvs())
     self.name = f'{self.first_name} {self.last_name}'
     self.username = f'user{self.id}'
-    # These are hard-coded from the AWS samples Retail Demo Store workshop
+    # These are hard-coded from the AWS samples Edtech Demo workshop
     self.persona = random.choice(category_preference_personas)
     self.discount_persona = random.choice(discount_personas)
     self.traits = {}

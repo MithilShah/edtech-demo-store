@@ -1,7 +1,7 @@
-# Retail Demo Store location Service
+# Edtech Demo location Service
 
 The location web service provides an API for retrieving store locations and 
-customer routes to support to Location Services demo in the Retail Demo Store.
+customer routes to support to Location Services demo in the Edtech Demo.
 To use the demo, see "Retail Geofencing and Location-aware Personalization"
 in the in-app Demo Guide.  
 

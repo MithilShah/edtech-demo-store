@@ -13,7 +13,7 @@
 
       <p class="mb-3">
         Reply "Y" to confirm. Next, you'll receive one text message with one personalized product recommendation. the
-        message will include a URL that will redirect you to the Retail Demo Store.
+        message will include a URL that will redirect you to the EdTech Demo.
       </p>
     </template>
   </ConfirmationModalLayout>

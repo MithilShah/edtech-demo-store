@@ -1,4 +1,4 @@
-# Retail Demo Store Offers Service
+# Edtech Demo Offers Service
 
 The Offers web service provides a RESTful API for retrieving coupons. 
 

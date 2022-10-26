@@ -4,7 +4,7 @@
 
     <div class="explanation mb-5">
       <p>
-        The dataset used to power the Retail Demo Store has thousands of shoppers, each one with different age, gender,
+        The dataset used to power the EdTech Demo has thousands of shoppers, each one with different age, gender,
         shopping interests, and browsing history. This demo allows you to select shoppers from this dataset.
       </p>
 
@@ -18,7 +18,7 @@
         @click="autoSelectShopper"
         data-toggle="tooltip"
         data-placement="bottom"
-        title="Randomly select a shopper from the current Retail Demo Store users dataset"
+        title="Randomly select a shopper from the current EdTech Demo users dataset"
         ref="autoSelectShopper"
       >
         Auto select shopper
@@ -29,7 +29,7 @@
         @click="chooseAShopper"
         data-toggle="tooltip"
         data-placement="bottom"
-        title="Select a shopper from the current Retail Demo Store users dataset based on demographics and shopping preferences"
+        title="Select a shopper from the current EdTech Demo users dataset based on demographics and shopping preferences"
         ref="chooseAShopper"
       >
         Choose a shopper

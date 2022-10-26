@@ -3,13 +3,13 @@ AWSTemplateFormatVersion: 2010-09-09
 
 # Do NOT remove the RETAIL_DS prefix in the template description below!
 Description: >
-  RETAIL_DS: This template deploys the Retail Demo Store reference architecture and workshop notebooks. (uksb-1t80l2nq1)
+  RETAIL_DS: This template deploys the EdTech Demo reference architecture and workshop notebooks. (uksb-1t80l2nq1)
 
 Metadata:
   AWS::CloudFormation::Interface:
     ParameterGroups:
       - Label:
-          default: "Retail Demo Store Deployment Configuration"
+          default: "EdTech Demo Deployment Configuration"
         Parameters:
           - ResourceBucket
           - ResourceBucketRelativePath
@@ -128,9 +128,9 @@ Metadata:
       AmazonPayPrivateKey:
         default: "Private key associated with Amazon Pay sandbox account"
       AlexaSkillId:
-        default: "ID of C-Store Demo Alexa skill to access Retail Demo Store"
+        default: "ID of C-Store Demo Alexa skill to access EdTech Demo"
       AlexaAmazonPayDefaultSandboxEmail:
-        default: "An email to test Alexa integration in case you have not set up Cognito authorisation to link your Retail Demo Store account"
+        default: "An email to test Alexa integration in case you have not set up Cognito authorisation to link your EdTech Demo account"
       IncludeSegmentDependencies:
         default: "Deploy Segment Resources"
       SegmentWriteKey:
@@ -170,7 +170,7 @@ Parameters:
   ResourceBucket:
     Type: String
     Description: >
-      S3 bucket name where the Retail Demo Store deployment resources are staged (product images, nested CloudFormation templates, source code snapshot,
+      S3 bucket name where the EdTech Demo deployment resources are staged (product images, nested CloudFormation templates, source code snapshot,
       notebooks, deployment Lambda code, etc).
 
   ResourceBucketRelativePath:
@@ -191,10 +191,10 @@ Parameters:
   SourceDeploymentType:
     Type: String
     Description: >
-      The Retail Demo Store deployment includes a CodePipeline configuration that will build and deploy Retail Demo Store
+      The EdTech Demo deployment includes a CodePipeline configuration that will build and deploy EdTech Demo
       microservices to ECS when a change is detected in the source repository. The source repository for CodePipeline
       can be configured to use your personal GitHub repository or CodeCommit. Use GitHub if you're actively developing
-      against Retail Demo Store in your own fork. CodeCommit is useful when you just want to get up and going quickly for
+      against EdTech Demo in your own fork. CodeCommit is useful when you just want to get up and going quickly for
       a demo or evaluation or for workshop scenarios, such as Event Engine, where you want attendees to have their own
       source repositories provisioned.
     AllowedValues:
@@ -204,23 +204,23 @@ Parameters:
 
   GitHubRepo:
     Type: String
-    Description: Name of Retail Demo Store GitHub repository. Will almost always be 'retail-demo-store'.
+    Description: Name of EdTech Demo GitHub repository. Will almost always be 'retail-demo-store'.
     Default: retail-demo-store
 
   GitHubBranch:
     Type: String
-    Description: Name of GitHub branch within the GitHub repository to link to this Retail Demo Store deployment.
+    Description: Name of GitHub branch within the GitHub repository to link to this EdTech Demo deployment.
     Default: master
 
   GitHubUser:
     Type: String
-    Description: If you are linking and deploying from a fork of the Retail Demo Store repository, enter your GitHub username. Otherwise, use the default of 'aws-samples' to link to the upstream repository.
+    Description: If you are linking and deploying from a fork of the EdTech Demo repository, enter your GitHub username. Otherwise, use the default of 'aws-samples' to link to the upstream repository.
     Default: MithilShah
 
   GitHubToken:
     Type: String
     Description: >
-      If you are linking and deploying from a private fork of the Retail Demo Store repository in your GitHub account, a GitHub Personal
+      If you are linking and deploying from a private fork of the EdTech Demo repository in your GitHub account, a GitHub Personal
       Access Token is required. Otherwise, leave blank. Be sure that your token has the "repo", "repo:status", and "admin:repo_hook" permission scopes.
     NoEcho: true
     Default: xxxx
@@ -228,7 +228,7 @@ Parameters:
   PreIndexOpenSearch:
     Type: String
     Description: >
-      Automatically index the Retail Demo Store products in OpenSearch. Otherwise, select 'No' if you would
+      Automatically index the EdTech Demo products in OpenSearch. Otherwise, select 'No' if you would
       prefer to complete this process yourself by stepping through the Search workshop included in this deployment
       as a Jupyter notebook in SageMaker.
     AllowedValues:
@@ -269,7 +269,7 @@ Parameters:
     Description: >
       Name to use with Reply-To email address when sending emails from Pinpoint. This parameter only applies when 'Auto-Configure Pinpoint'
       is set to 'Yes'.
-    Default: "AWS Retail Demo Store"
+    Default: "AWS EdTech Demo"
 
   UseDefaultIVSStreams:
     Type: String
@@ -346,7 +346,7 @@ Parameters:
     Description: >
       This Alexa skill with this SkillId will be allowed to invoke the back-end skill Lambda deployed as a part
       of this CloudFormation stack. The back-end Lambda supports the C-Store demo allowing hands-free location
-      based searching with Location Service (if enabled), integration with the Retail Demo Store back-end, online recommendations,
+      based searching with Location Service (if enabled), integration with the EdTech Demo back-end, online recommendations,
       and checkout with Amazon Pay (if enabled).
 
   AlexaAmazonPayDefaultSandboxEmail:
@@ -818,7 +818,7 @@ Outputs:
     Value: !GetAtt Base.Outputs.ClusterName
 
   WebURL:
-    Description: Retail Demo Store Web UI URL
+    Description: EdTech Demo Web UI URL
     Value: !GetAtt Base.Outputs.WebUICDNURL
 
   OpenSearchDomainEndpoint:
@@ -826,7 +826,7 @@ Outputs:
     Value: !GetAtt Base.Outputs.OpenSearchDomainEndpoint
 
   ParameterIVSVideoChannelMap:
-    Description: Retail Demo Store video file to IVS channel mapping parameter
+    Description: EdTech Demo video file to IVS channel mapping parameter
     Value: !GetAtt Base.Outputs.ParameterIVSVideoChannelMap
 
   PinpointAppId:

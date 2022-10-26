@@ -1,15 +1,15 @@
 <template>
   <Layout :showNav="false" :showFooter="false" :showTextAlerts="false" :showDemoGuide="false" backgroundColor="var(--aws-squid-ink)">
     <div class="container mb-2 text-left">
-      <h1 class="heading my-5 text-center">Welcome to the Retail Demo Store!</h1>
+      <h1 class="heading my-5 text-center">Welcome to the EdTech Demo!</h1>
 
       <p>
-        The Retail Demo Store is a demo platform to demonstrate how AWS infrastructure and services can be used to build
+        The EdTech Demo is a demo platform to demonstrate how AWS infrastructure and services can be used to build
         personalized customer experiences across multiple channels of engagement.
       </p>
 
       <p>
-        The Retail Demo Store mimics an online store with products, users and user-interactions to showcase the
+        The EdTech Demo mimics an online store with products, users and user-interactions to showcase the
         personalized product recommendations a shopper would receive based on historical and real time click-through
         behavior.
       </p>

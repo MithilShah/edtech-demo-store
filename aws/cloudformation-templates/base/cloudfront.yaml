@@ -2,7 +2,7 @@
 AWSTemplateFormatVersion: 2010-09-09
 
 Description: >
-    This template deploys the Retail Demo Store CloudFront distribution for the Web-UI and static assets.
+    This template deploys the EdTech Demo CloudFront distribution for the Web-UI and static assets.
 
 Parameters:
   CleanupBucketLambdaArn:
@@ -54,7 +54,7 @@ Resources:
     Properties:
       DistributionConfig:
         Enabled: true
-        Comment: !Sub 'Retail Demo Store CDN for ${WebUIBucket}'
+        Comment: !Sub 'EdTech Demo CDN for ${WebUIBucket}'
         DefaultRootObject: index.html
         PriceClass: PriceClass_100
         HttpVersion: http2
@@ -144,7 +144,7 @@ Outputs:
     Description: CloudFront distribution ID for the Web UI CDN
     Value: !Ref WebUICDN
 
-  # Since the Retail Demo Store web service load balancers are not deployed with SSL, 
+  # Since the EdTech Demo web service load balancers are not deployed with SSL, 
   # the Web UI URL must be http to avoid mixed content errors in the browser.
   WebUICDNURL:
     Description: The URL for the web application
@@ -161,7 +161,7 @@ Outputs:
     Description: CloudFront distribution ID for the Swagger UI CDN
     Value: !Ref SwaggerUICDN
 
-  # Since the Retail Demo Store web service load balancers are not deployed with SSL, 
+  # Since the EdTech Demo web service load balancers are not deployed with SSL, 
   # the Swagger UI URL must be http to avoid mixed content errors in the browser.
   SwaggerUICDNURL:
     Description: The URL for the Swagger UI application
