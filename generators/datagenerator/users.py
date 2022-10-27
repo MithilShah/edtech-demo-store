@@ -31,10 +31,10 @@ age_dist = truncnorm((age_min - age_mean) / age_sd, (age_max - age_mean) / age_s
 
 # Persona combinations ordered from strongest affinity to latent interest.
 category_preference_personas_web = (
-    'english_history_maths', 'maths_python_regression',
-    'history_english_marketing', 'marketing_finance_maths',
-    'python_regression_clustering', 'maths_clustering_regression',
-    'history_finance_marketing'
+    'Coding_School_MBA', 'MBA_Coding_School',
+    'Data Science_School_MBA', 'Data Science_Coding_School',
+    'MBA_Data Science_School', 'MBA_Coding_Data Science',
+    'Coding_School_Data Science'
 )
 
 category_preference_personas_cstore = (

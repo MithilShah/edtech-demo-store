@@ -28,13 +28,13 @@ num_cstore_users = num_users - num_web_users
 
 print('Generating {} random web users...'.format(num_web_users))
 
-pool = UserPool.new_file('users.json.gz',
+pool = UserPool.new_file('src/users/src/users-service/data/users.json.gz',
                          num_web_users,
                          category_preference_personas=users.category_preference_personas_web)
-pool_check = UserPool.from_file('users.json.gz')
+# pool_check = UserPool.from_file('users.json.gz')
 
-if pool.users.__repr__() != pool_check.users.__repr__():
-    raise ValueError("User generation: re-loading users alters something.")
+# if pool.users.__repr__() != pool_check.users.__repr__():
+#     raise ValueError("User generation: re-loading users alters something.")
 
 # print('Generating {} random c-store users...'.format(num_cstore_users))
 

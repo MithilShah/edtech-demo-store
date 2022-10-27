@@ -60,8 +60,7 @@ DISCOUNT_PROBABILITY = 0.2
 DISCOUNT_PROBABILITY_WITH_PREFERENCE = 0.5
 
 IN_PRODUCTS_FILENAME = "src/products/src/products-service/data/products.yaml"
-IN_USERS_FILENAMES = ["src/users/src/users-service/data/users.json.gz",
-                      "src/users/src/users-service/data/cstore_users.json.gz"]
+IN_USERS_FILENAMES = ["src/users/src/users-service/data/users.json.gz"]
 
 PROGRESS_MONITOR_SECONDS_UPDATE = 30
 
@@ -228,7 +227,7 @@ def generate_interactions(out_interactions_filename, users_df, products_df):
             preferred_categories_and_subcats = persona.split('_')
             preferred_highlevel_categories = [catstring.split(':')[0] for catstring in preferred_categories_and_subcats]
             # preferred_styles = [catstring.split(':')[1] for catstring in preferred_categories_and_subcats]
-
+            # print(category_frequencies)
             p_normalised = (category_affinity_probs * category_frequencies[preferred_highlevel_categories].values)
             p_normalised /= p_normalised.sum()
             p = NORMALISE_PER_PRODUCT_WEIGHT * p_normalised + (1-NORMALISE_PER_PRODUCT_WEIGHT) * category_affinity_probs
