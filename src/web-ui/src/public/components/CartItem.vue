@@ -10,7 +10,7 @@
         <div class="d-flex d-sm-block justify-content-between align-items-center">
           <ProductPrice :price="product.price" class="product-price" :discount="cartPrice < product.price"></ProductPrice>
 
-          <div class="d-flex align-items-center">
+          <!-- <div class="d-flex align-items-center">
             <button @click="decreaseProductQuantity" aria-label="decrease quantity" class="btn text-black-50">
               <i class="fas fa-minus"></i>
             </button>
@@ -19,12 +19,12 @@
             </div>
             <button @click="increaseProductQuantity" aria-label="increase quantity" class="btn text-black-50">
               <i class="fas fa-plus"></i>
-            </button>
+            </button> -->
 
-            <button class="delete-btn btn" @click="removeProductFromCart">
+            <!-- <button class="delete-btn btn" @click="removeProductFromCart">
               Delete
-            </button>
-          </div>
+            </button> 
+          </div>-->
         </div>
       </div>
     </div>

@@ -1,13 +1,13 @@
 <template>
   <div>
-    <h1 class="heading">Select Shopper</h1>
+    <h1 class="heading">Select Student</h1>
     <p>
-      Select a shopper to see how the personalized product recommendations change based on the shopper’s browsing
+      Select a Student to see how the personalized course recommendations change based on the student's browsing
       history and interests.
     </p>
 
     <div class="form-container p-4">
-      <div class="mb-4">Use the controls below to select a shopper from the EdTech Demo user dataset.</div>
+      <div class="mb-4">Use the controls below to select a student from the EdTech Demo student dataset.</div>
 
       <form @submit.prevent="onSubmit" class="form">
         <div class="form-group d-flex align-items-center">

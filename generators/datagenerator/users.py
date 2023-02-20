@@ -22,9 +22,9 @@ fake.add_provider(user_agent)
 fake.add_provider(profile)
 
 # Normally distribute ages between 18 and 100 with a mean age of 32.
-age_min = 18
-age_max = 100
-age_mean = 32
+age_min = 15
+age_max = 50
+age_mean = 25
 age_sd = 15
 
 age_dist = truncnorm((age_min - age_mean) / age_sd, (age_max - age_mean) / age_sd, loc=age_mean, scale=age_sd)
@@ -132,7 +132,7 @@ class User:
         self.first_name = fake.first_name_male()
         self.last_name = fake.last_name_male()
 
-    address_state = fake.state_abbr(include_territories=True)
+    address_state = fake.state_abbr(include_territories=False)
     email_first = self.first_name.replace(' ', '').lower()
     email_last = self.last_name.replace(' ', '').lower()
     self.email = f'{email_first}.{email_last}@example.com'

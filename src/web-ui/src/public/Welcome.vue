@@ -31,13 +31,12 @@
           <div class="login-cta d-flex justify-content-center align-items-center">
             Have an account?<router-link to="/auth" class="sign-in btn btn-link">Sign in</router-link>
           </div>
-          <router-link to="/auth?signup=true" class="create-account mt-3 mt-sm-0 ml-sm-3 btn btn-primary"
+          <!-- <router-link to="/auth?signup=true" class="create-account mt-3 mt-sm-0 ml-sm-3 btn btn-primary"
             >Create an account</router-link
-          >
+          > -->
         </div>
 
-        <router-link to="/" class="mt-3 skip-login btn btn-link">Skip login for now</router-link>
-      </div>
+        </div>
     </div>
   </Layout>
 </template>

@@ -48,6 +48,12 @@ export default {
               type: 'string',
               required: true
             },
+            {
+              label: 'Oppotunity Id',
+              key: 'custom:oppid',
+              type: 'string',
+              required: true
+            },
           ]
         }
       }

@@ -13,7 +13,7 @@
 
             <div class="mb-2">
               <template v-if="outOfStock">Sorry, this item is currently out of stock.</template>
-              <template v-else>Items currently in stock: {{ product.current_stock }}</template>
+              <!-- <template v-else>Items currently in stock: {{ product.current_stock }}</template> -->
             </div>
 
             <div v-if="fenixenablePDP == 'TRUE'" class="fenix-estimates">
@@ -26,7 +26,7 @@
             <div v-if="cartHasMaxAmount" class="mb-2">Sorry, you cannot add more of this item to your cart.</div>
 
             <div class="mb-5 mb-md-4 d-flex">
-              <button
+              <!-- <button
                 v-if="!outOfStock && !cartHasMaxAmount"
                 class="quantity-dropdown mr-3 btn btn-outline-secondary dropdown-toggle"
                 type="button"
@@ -36,7 +36,7 @@
                 aria-expanded="false"
               >
                 Qty: {{ quantity }}
-              </button>
+              </button> -->
               <div class="dropdown-menu" aria-labelledby="quantity-dropdown">
                 <button
                   v-for="i in Math.max(0, Math.min(9, product.current_stock - quantityInCart))"
@@ -48,7 +48,7 @@
                 </button>
               </div>
               <button class="add-to-cart-btn btn" @click="addProductToCart" :disabled="outOfStock || cartHasMaxAmount">
-                Add to Cart
+                Subscribe
               </button>
             </div>
 
@@ -230,11 +230,11 @@ export default {
     },
     renderAddedToCartConfirmation() {
       swal({
-        title: 'Added to Cart',
+        title: 'Subscribe',
         icon: 'success',
         buttons: {
-          cancel: 'Continue Shopping',
-          cart: 'View Cart',
+          cancel: 'Continue Browsing',
+          cart: 'View Subscriptions',
         },
       }).then((value) => {
         switch (value) {

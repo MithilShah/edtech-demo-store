@@ -21,10 +21,10 @@
         <div v-if="!isMobile">Interact with the store products and categories.</div>
       </div>
 
-      <div ref="demo-guide" class="demo-guide">
+      <!-- <div ref="demo-guide" class="demo-guide">
         <div class="arrow-text-heading">Demo guide</div>
         <div v-if="!isMobile">Provides more information about the AWS services integrated into this demo.</div>
-      </div>
+      </div> -->
 
       <div class="img">
         <img ref="img" src="/demo-walkthrough-overview.png" alt="" class="img-fluid" />

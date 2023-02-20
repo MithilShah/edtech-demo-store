@@ -6,7 +6,7 @@
       <Search class="search mx-lg-4"></Search>
       <UserDropdown class="user-dropdown"></UserDropdown>
       <NavSeparator class="d-none d-lg-block mx-2"></NavSeparator>
-      <SupportLink class="support"></SupportLink>
+      <!-- <SupportLink class="support"></SupportLink> -->
       <NavSeparator class="sep-2 mx-2"></NavSeparator>
       <CartLink class="cart"></CartLink>
     </div>
@@ -17,7 +17,7 @@
 import HomeLink from './HomeLink/HomeLink';
 import ShopDropdown from './ShopDropdown/ShopDropdown';
 import Search from './Search/Search';
-import SupportLink from './SupportLink/SupportLink';
+// import SupportLink from './SupportLink/SupportLink';
 import NavSeparator from './NavSeparator/NavSeparator';
 import CartLink from './CartLink/CartLink';
 import UserDropdown from './UserDropdown/UserDropdown';
@@ -28,7 +28,7 @@ export default {
     HomeLink,
     ShopDropdown,
     Search,
-    SupportLink,
+    // SupportLink,
     NavSeparator,
     CartLink,
     UserDropdown,

@@ -5,14 +5,14 @@
     </h1>
 
     <p>
-      To showcase how Amazon Personalize tailors product recommendations based on a user’s historical and real time
-      click-through behavior, the EdTech Demo includes several fictitious shoppers, each with different shopping
+      To showcase how Amazon Personalize tailors course recommendations based on a student’s historical and real time
+      click-through behavior, the EdTech Demo includes several fictitious students, each with different course
       preferences.
     </p>
 
     <div :class="{ 'images mt-5': true, 'images--mobile': isMobile }">
       <div ref="switch-shoppers-text" class="switch-shoppers-text">
-        Switch shoppers by clicking on the shopper details located next to the shopping cart icon. Top right corner.
+        Switch students by clicking on the student details located next to the shopping cart icon. Top right corner.
       </div>
 
       <div class="switch-shoppers">
@@ -26,12 +26,12 @@
 
       <div class="select-shoppers-text">
         <p>
-          This demo allows you to select shoppers from the store users’ dataset, based on age and shopping preferences.
+          This demo allows you to select students from the store students' dataset, based on age and course preferences.
         </p>
 
         <p>
-          For an optimal demo experience, switch shoppers at least twice to see the different product recommendations
-          each shopper receives.
+          For an optimal demo experience, switch students at least twice to see the different course recommendations
+          each student receives.
         </p>
       </div>
 

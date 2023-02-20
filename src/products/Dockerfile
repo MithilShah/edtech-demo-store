@@ -1,5 +1,5 @@
 FROM public.ecr.aws/s5z3t2n9/golang:1.15-alpine AS build
-ARG GOPROXY_OVERRIDE=https://proxy.golang.org
+ARG GOPROXY_OVERRIDE=direct
 WORKDIR /src/
 RUN apk add --no-cache git bash
 RUN go get -u github.com/aws/aws-sdk-go/service/dynamodb/dynamodbattribute

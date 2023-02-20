@@ -67,7 +67,7 @@ import { mapState, mapGetters, mapActions } from 'vuex';
 
 import { RepositoryFactory } from '@/repositories/RepositoryFactory';
 import { AnalyticsHandler } from '@/analytics/AnalyticsHandler';
-import { Modals } from '@/partials/AppModal/config';
+//import { Modals } from '@/partials/AppModal/config';
 
 import Layout from '@/components/Layout/Layout';
 import RecommendedProductsSection from '@/components/RecommendedProductsSection/RecommendedProductsSection';
@@ -116,7 +116,7 @@ export default {
   },
   mounted() {
     if (!this.demoWalkthroughShown) {
-      this.openModal(Modals.DemoWalkthrough);
+      //this.openModal(Modals.DemoWalkthrough);
       this.markDemoWalkthroughAsShown();
     }
   },

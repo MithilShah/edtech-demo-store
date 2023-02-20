@@ -199,26 +199,26 @@ const router = new Router({
       path: '/',
       name: 'Main',
       component: Main,
-      meta: { requiresAuth: false}
+      meta: { requiresAuth: true}
     },
     {
       path: '/product/:id',
       name: 'ProductDetail',
       component: ProductDetail,
       props: route => ({ discount: route.query.di === "true" || route.query.di === true}),
-      meta: { requiresAuth: false}
+      meta: { requiresAuth: true}
     },
     {
       path: '/category/:id',
       name: 'CategoryDetail',
       component: CategoryDetail,
-      meta: { requiresAuth: false}
+      meta: { requiresAuth: true}
     },
     {
       path: '/live',
       name: 'Live',
       component: Live,
-      meta: { requiresAuth: false}
+      meta: { requiresAuth: true}
     },
     {
       path: '/help',

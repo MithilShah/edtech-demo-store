@@ -13,8 +13,8 @@ Docker Compose will load the [.env](.env) file to resolve environment variables 
 You can find the common environment variables from your deployed stack in the CloudFormation output name `ExportEnvVarScript`. Use this CLI to get the output in a proper format.
 
 ```sh
-aws cloudformation describe-stacks --stack-name retaildemostore \
-  --region REGION \
+aws cloudformation describe-stacks --stack-name edtech-demo \
+  --region us-west-2 \
   --query "Stacks[0].Outputs[?OutputKey=='ExportEnvVarScript'].OutputValue" \
   --output text
 ```

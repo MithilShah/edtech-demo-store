@@ -21,7 +21,7 @@
               ></CartItem>
             </ul>
           </div>
-          <div v-if="cart.items.length > 0" class="summary-container col-lg-auto">
+          <!-- <div v-if="cart.items.length > 0" class="summary-container col-lg-auto">
              <FenixCart
               v-if="fenixenableCART == 'TRUE'"
               :lineItems="cart">
@@ -34,7 +34,7 @@
               >
               <AbandonCartButton class="abandon-cart"></AbandonCartButton>
             </div>
-          </div>
+          </div> -->
         </div>
       </div>
     </template>
@@ -49,18 +49,18 @@ import { AnalyticsHandler } from '@/analytics/AnalyticsHandler';
 import CartItem from './components/CartItem.vue';
 import Layout from '@/components/Layout/Layout';
 
-import AbandonCartButton from '@/partials/AbandonCartButton/AbandonCartButton';
+// import AbandonCartButton from '@/partials/AbandonCartButton/AbandonCartButton';
 
-import FenixCart from '@/components/Fenix/FenixCart';
+// import FenixCart from '@/components/Fenix/FenixCart';
 
 
 export default {
   name: 'Cart',
   components: {
     Layout,
-    CartItem,
-    AbandonCartButton,
-    FenixCart
+    CartItem
+    // AbandonCartButton,
+    // FenixCart
   },
   data() {
     return {
@@ -84,12 +84,12 @@ export default {
     previousPageLinkProps() {
       if (!this.lastVisitedPage) return null;
 
-      return { text: 'Continue Shopping', to: this.lastVisitedPage };
+      return { text: 'Continue Browsing', to: this.lastVisitedPage };
     },
     cartQuantityReadout() {
       if (this.cartQuantity === null) return null;
 
-      return `(${this.cartQuantity}) ${this.cartQuantity === 1 ? 'item' : 'items'} in your cart shopping cart`;
+      return `you have subscribed to ${this.cartQuantity} ${this.cartQuantity === 1 ? 'course' : 'courses'} `;
     },
     summaryQuantityReadout() {
       if (this.cartQuantity === null) return null;

@@ -5,9 +5,9 @@
       demonstration purposes only.
     </p>
 
-    <p class="mb-1">
+    <!-- <p class="mb-1">
       All images shown are from <a href="https://unsplash.com" target="_blank" rel="noopener noreferrer">Unsplash</a>.
-    </p>
+    </p> -->
   </div>
 </template>
 

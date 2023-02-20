@@ -1,14 +1,14 @@
 <template>
   <div :class="{ 'get-started-container': true, mobile: isMobile }">
-    <h1 class="heading mb-4 text-center">Select A Shopper</h1>
+    <h1 class="heading mb-4 text-center">Select A Student</h1>
 
     <div class="explanation mb-5">
       <p>
-        The dataset used to power the EdTech Demo has thousands of shoppers, each one with different age, gender,
-        shopping interests, and browsing history. This demo allows you to select shoppers from this dataset.
+        The dataset used to power the EdTech Demo has hundreds of students, each one with different age, gender,
+        study interests, and browsing history. This demo allows you to select students from this dataset.
       </p>
 
-      <p>Select a fictitious shopper by using one of the options below.</p>
+      <p>Select a fictitious student by using one of the options below.</p>
     </div>
 
     <div class="button-container mb-5 d-flex justify-content-center">
@@ -18,10 +18,10 @@
         @click="autoSelectShopper"
         data-toggle="tooltip"
         data-placement="bottom"
-        title="Randomly select a shopper from the current EdTech Demo users dataset"
+        title="Randomly select a student from the current EdTech Demo students dataset"
         ref="autoSelectShopper"
       >
-        Auto select shopper
+        Auto select Student
       </button>
       <button
         type="button"
@@ -29,10 +29,10 @@
         @click="chooseAShopper"
         data-toggle="tooltip"
         data-placement="bottom"
-        title="Select a shopper from the current EdTech Demo users dataset based on demographics and shopping preferences"
+        title="Select a student from the current EdTech Demo students dataset based on demographics and study preferences"
         ref="chooseAShopper"
       >
-        Choose a shopper
+        Choose a student
       </button>
     </div>
 
@@ -41,7 +41,7 @@
     <div>
       <p>
         Alternatively, you can use your
-        <a href="#" @click="useDefaultProfile" class="default-profile">default profile</a> to go through the cold user
+        <a href="#" @click="useDefaultProfile" class="default-profile">default profile</a> to go through the cold student
         path to see how recommendations are personalized throughout based on browsing behavior.
       </p>
     </div>

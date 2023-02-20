@@ -8,10 +8,10 @@
     >
       <i class="fa fa-chevron-left"></i>
     </button>
-
+<!-- 
     <h1 :id="DEMO_GUIDE_TITLE_ID" class="modal-title">
       DEMO GUIDE
-    </h1>
+    </h1> -->
 
     <span v-if="!isMobile">
       <span class="mx-2">/</span>{{ selectedSectionTitle }}<span class="mx-2">/</span>{{ selectedArticleTitle }}

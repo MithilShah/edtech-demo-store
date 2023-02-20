@@ -11,7 +11,7 @@
       aria-expanded="false"
     >
       <template v-if="user.persona">
-        <div class="shopper">Shopper:</div>
+        <div class="shopper">Student:</div>
 
         <div>
           <div>{{ username }} - {{ user.age }} years - {{ gender }}</div>
@@ -25,17 +25,17 @@
     <div v-if="user" class="dropdown-menu px-3" aria-labelledby="navbarDropdown">
       <a href="#" @click="switchShopper" class="dropdown-item">
         <div class="dropdown-item-title">
-          Switch shoppers
+          Switch students
         </div>
-        <div>Select another shopper with different shopping preferences</div>
+        <div>Select another student with different course preferences</div>
       </a>
 
-      <div class="dropdown-divider"></div>
+      <!-- <div class="dropdown-divider"></div>
 
       <router-link to="/orders" class="dropdown-item">
-        <div class="dropdown-item-title">Orders</div>
-        <div>View orders placed by the current shopper profile</div>
-      </router-link>
+        <div class="dropdown-item-title">Courses</div>
+        <div>View course subscribed by the current student profile</div>
+      </router-link> -->
 
       <div class="dropdown-divider"></div>
 
