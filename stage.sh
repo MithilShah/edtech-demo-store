@@ -7,7 +7,7 @@
 #
 # Exammple usage:
 # ./stage.sh S3_BUCKET [OPTIONAL_S3_PATH/] [--private-s3] [--only-cfn-template] [--skip-generators]
-#
+# ./stage.sh edtech-personalize-demo stage --private-s3  
 # The S3_BUCKET/OPTIONAL_S3_PATH is where all resources and templates will be uploaded.
 # If you don't specify the OPTIONAL_S3_PATH, it will be uploaded to the root of the bucket.
 #

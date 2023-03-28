@@ -68,7 +68,7 @@
 
     <div class="button-container d-flex">
       <button class="try-again btn btn-outline-primary" @click="tryAgain">Try again</button>
-      <button class="confirm btn btn-primary" @click="confirmShopper">Confirm shopper</button>
+      <button class="confirm btn btn-primary" @click="confirmShopper">Confirm student</button>
     </div>
   </div>
 </template>
